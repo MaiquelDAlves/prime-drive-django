@@ -31,6 +31,14 @@ body {
   color: white;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.contact-icon-circle {
+  border-radius: 9999px;
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
   filter: invert(1);

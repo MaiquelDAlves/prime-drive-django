@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}?v=6" />
     <script src="{% static 'js/main.js' %}" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>prime-drive</title>
@@ -103,18 +103,37 @@
     <!-- MENU MOBILE LATERAL -->
     <nav
       id="mobile-menu"
-      class="fixed top-0 right-0 w-[280px] h-screen bg-blue-deep/95 backdrop-blur-xl border-l border-white/10 z-50 translate-x-full"
+      class="fixed top-0 right-0 z-50 h-screen w-[320px] max-w-[86vw] translate-x-full overflow-y-auto border-l border-white/10 bg-blue-deep/95 shadow-2xl shadow-black/60 backdrop-blur-xl"
     >
-      <!-- BOTAO FECHAR MENU MOBILE -->
-      <div id="menu-close" class="flex justify-end p-6 cursor-pointer">
-        <button type="button" aria-label="Fechar menu">
+      <div
+        class="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-gold-premium/10"
+      ></div>
+      <div
+        class="pointer-events-none absolute -right-24 top-24 h-56 w-56 rounded-full bg-gold-premium/10 blur-3xl"
+      ></div>
+
+      <div class="relative z-10 flex min-h-full flex-col px-6 py-6">
+        <!-- TOPO MENU MOBILE -->
+        <div class="flex items-center justify-between border-b border-white/10 pb-5">
+          <img
+            class="w-32"
+            src="{% static 'assets/logo/logo.png' %}"
+            alt="Prime Drive"
+          />
+
+          <button
+            id="menu-close"
+            type="button"
+            aria-label="Fechar menu"
+            class="flex size-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition hover:border-gold-premium/70 hover:bg-white/10"
+          >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="2"
             stroke="currentColor"
-            class="size-8 stroke-gold-premium"
+            class="size-6 stroke-gold-premium"
           >
             <path
               stroke-linecap="round"
@@ -122,30 +141,115 @@
               d="M6 18 18 6M6 6l12 12"
             />
           </svg>
-        </button>
+          </button>
+        </div>
+
+        <!-- LINKS DO MENU MOBILE -->
+        <ul class="mt-7 flex flex-col gap-2 text-sm text-white">
+          <li>
+            <a
+              class="flex items-center justify-between rounded-md border border-white/10 bg-white/5 px-4 py-3 transition hover:border-gold-premium/70 hover:bg-white/10 hover:text-gold-premium"
+              href="{% url 'inicio' %}"
+            >
+              <span>INICIO</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="flex items-center justify-between rounded-md border border-white/10 bg-white/5 px-4 py-3 transition hover:border-gold-premium/70 hover:bg-white/10 hover:text-gold-premium"
+              href="{% url 'servicos' %}"
+            >
+              <span>SERVICOS</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="flex items-center justify-between rounded-md border border-white/10 bg-white/5 px-4 py-3 transition hover:border-gold-premium/70 hover:bg-white/10 hover:text-gold-premium"
+              href="{% url 'veiculo' %}"
+            >
+              <span>VEICULO</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="flex items-center justify-between rounded-md border border-white/10 bg-white/5 px-4 py-3 transition hover:border-gold-premium/70 hover:bg-white/10 hover:text-gold-premium"
+              href="{% url 'sobre' %}"
+            >
+              <span>SOBRE NOS</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="flex items-center justify-between rounded-md border border-white/10 bg-white/5 px-4 py-3 transition hover:border-gold-premium/70 hover:bg-white/10 hover:text-gold-premium"
+              href="{% url 'contato' %}"
+            >
+              <span>CONTATO</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="mt-7 rounded-md border border-white/10 bg-blue-dark/70 p-4">
+          <p class="text-xs uppercase tracking-[0.2em] text-amber-400">
+            Atendimento
+          </p>
+          <p class="mt-2 text-sm font-semibold text-white">
+            Transporte executivo com resposta r&aacute;pida.
+          </p>
+          <p class="mt-1 text-xs leading-relaxed text-gray-400">
+            Segunda a Sexta: 8h &agrave;s 20h<br />
+            S&aacute;bado: 8h &agrave;s 14h
+          </p>
+        </div>
+
+        <div class="mt-4 flex flex-col gap-3">
+          <a
+            href="{% url 'orcamento' %}"
+            class="flex items-center justify-center gap-2 rounded-md bg-gold-premium px-4 py-3 text-sm font-bold uppercase text-black transition hover:brightness-110"
+          >
+            Solicitar or&ccedil;amento
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-4"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+
+          <a
+            href="https://wa.me/5549991338651?text=Ola%2C%20gostaria%20de%20falar%20com%20a%20Prime%20Drive."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 rounded-md border border-gold-premium/70 bg-transparent px-4 py-3 text-sm font-semibold uppercase text-gold-premium transition hover:bg-gold-premium hover:text-black"
+          >
+            Fale conosco
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              fill="currentColor"
+              class="size-4"
+            >
+              <path
+                d="M16.02 3C8.86 3 3.04 8.82 3.04 15.98c0 2.3.6 4.54 1.75 6.51L3 29l6.68-1.75a12.9 12.9 0 0 0 6.34 1.62C23.18 28.87 29 23.05 29 15.89 29 8.74 23.18 3 16.02 3Zm0 23.67c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.96 1.04 1.06-3.86-.27-.43a10.7 10.7 0 0 1-1.63-5.63c0-6.03 4.91-10.94 10.94-10.94 2.92 0 5.67 1.14 7.73 3.2a10.86 10.86 0 0 1 3.21 7.65c0 6.03-4.91 10.78-10.94 10.78Zm6.01-8.19c-.33-.16-1.95-.96-2.25-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.25-.71.08-.33-.16-1.39-.51-2.65-1.63-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.14-.67.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.58 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.95-.8 2.23-1.57.27-.77.27-1.43.19-1.57-.08-.14-.3-.22-.63-.38Z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <p class="mt-auto pt-8 text-xs leading-relaxed text-gray-500">
+          Prime Drive &bull; Transporte executivo em Chapec&oacute; e regi&atilde;o.
+        </p>
       </div>
-      <!-- LINKS DO MENU MOBILE -->
-      <ul class="flex flex-col gap-10 pt-20 px-8 text-white text-sm">
-        <li class="hover:text-gold-premium transition cursor-pointer">
-          <a href="{% url 'inicio' %}">INICIO</a>
-        </li>
-
-        <li class="hover:text-gold-premium transition cursor-pointer">
-          <a href="{% url 'servicos' %}">SERVICOS</a>
-        </li>
-
-        <li class="hover:text-gold-premium transition cursor-pointer">
-          <a href="{% url 'veiculo' %}">VEICULO</a>
-        </li>
-
-        <li class="hover:text-gold-premium transition cursor-pointer">
-          <a href="{% url 'sobre' %}">SOBRE NOS</a>
-        </li>
-
-        <li class="hover:text-gold-premium transition cursor-pointer">
-          <a href="{% url 'contato' %}">CONTATO</a>
-        </li>
-      </ul>
     </nav>
 
     {% block 'conteudo' %} {% endblock 'conteudo' %}

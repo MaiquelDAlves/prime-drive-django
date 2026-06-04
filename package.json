@@ -1,0 +1,25 @@
+{
+  "name": "prime-drive-django",
+  "version": "1.0.0",
+  "description": "Este projeto usa o Tailwind CSS via standalone CLI, sem Node.js e sem npm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaiquelDAlves/prime-drive-django.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MaiquelDAlves/prime-drive-django/issues"
+  },
+  "homepage": "https://github.com/MaiquelDAlves/prime-drive-django#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  }
+}
