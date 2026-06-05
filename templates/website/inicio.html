@@ -1,249 +1,709 @@
 {% extends 'base.html' %} {% block 'conteudo' %}
-<!-- HERO SECTION / SEÇÃO PRINCIPAL COM IMAGEM DE FUNDO -->
-<section
-  class="relative h-[calc(100dvh-64px)] bg-cover bg-[60%_35%] bg-no-repeat bg-[url('/static/assets/img/suv-noite-mobile.png')] md:bg-[url('/static/assets/img/suv-noite.png')]"
->
-  <!-- OVERLAY ESCURO SOBRE A IMAGEM DE FUNDO -->
+
+<section class="bg-blue-deep">
   <div
-    class="absolute inset-0 bg-gradient-to-b from-blue-deep/70 via-blue-deep/40 to-blue-deep/90"
+    class="relative overflow-hidden bg-[url('/static/assets/img/suv-noite-mobile.png')] bg-cover bg-[58%_top] bg-no-repeat lg:bg-[url('/static/assets/img/suv-noite.png')] lg:bg-cover lg:bg-center"
+  >
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-blue-deep/65 via-blue-deep/50 to-blue-deep lg:bg-gradient-to-r lg:from-blue-deep/95 lg:via-blue-deep/55 lg:to-blue-deep/15"
+  ></div>
+  <div
+    class="pointer-events-none absolute inset-x-0 bottom-0 hidden h-1/2 bg-gradient-to-t from-blue-deep via-blue-deep/70 to-transparent lg:block"
   ></div>
 
-  <!-- CONTAINER DO CONTEÚDO DO HERO -->
-  <div class="container mx-auto relative z-10 h-full px-6 pt-10 flex flex-col">
-    <!-- CONTEÚDO PRINCIPAL DO HERO -->
-    <!-- TEXTO SUPERIOR / CHAMADA PREMIUM -->
-    <h1
-      class="text-sm xl:text-base tracking-[0.2em] uppercase text-amber-400 font-medium mb-4"
+  <div
+    class="container relative z-10 mx-auto flex flex-col px-5 py-5 lg:px-6 lg:py-7 lg:pb-10"
+  >
+    <div
+      class="grid flex-1 grid-cols-1 gap-4 lg:grid-cols-[520px_1fr] lg:items-start lg:gap-10 xl:grid-cols-[600px_1fr]"
     >
-      TRANSPORTE EXECUTIVO PREMIUM
-    </h1>
-    <!-- TÍTULO PRINCIPAL -->
-    <p class="text-5xl xl:text-6xl font-light leading-tight mb-3">
-      EXCELÊNCIA EM CADA TRAJETO.
-    </p>
-    <!-- SUBTÍTULO DO HERO -->
-    <p class="text-lg xl:text-xl text-gray-200 max-w-2xl">
-      Conforto, segurança e pontualidade para quem valoriza o melhor.
-    </p>
-    <!-- LISTA DE BENEFÍCIOS DO SERVIÇO -->
-    <div class="mt-3 md:mt-16">
-      <ul class="space-y-4 lg:space-y-5">
-        <li class="flex items-center gap-3 lg:gap-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="size-5 lg:size-7 xl:size-8 stroke-gold-premium drop-shadow-[0_3px_10px_rgba(0,0,0,0.9)]"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-            />
-          </svg>
-
-          <span
-            class="[text-shadow:0_4px_14px_rgba(0,0,0,1)] font-bold lg:text-lg xl:text-xl"
-            >Viagens Regionais</span
-          >
-        </li>
-
-        <li class="flex items-center gap-3 lg:gap-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-            class="size-5 lg:size-7 xl:size-8 stroke-gold-premium drop-shadow-[0_3px_10px_rgba(0,0,0,0.9)]"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3 13l1.5-4.5A2 2 0 016.4 7h11.2a2 2 0 011.9 1.5L21 13m-18 0v4m18-4v4m-2 0h-2m-10 0H5m1-4h12"
-            />
-            <circle cx="7.5" cy="16.5" r="1" />
-            <circle cx="16.5" cy="16.5" r="1" />
-          </svg>
-          <span
-            class="[text-shadow:0_4px_14px_rgba(0,0,0,1)] font-bold lg:text-lg xl:text-xl"
-            >Veículo Híbrido Premium</span
-          >
-        </li>
-
-        <li class="flex items-center gap-3 lg:gap-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="size-5 lg:size-7 xl:size-8 stroke-gold-premium drop-shadow-[0_3px_10px_rgba(0,0,0,0.9)]"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
-            />
-          </svg>
-
-          <span
-            class="[text-shadow:0_4px_14px_rgba(0,0,0,1)] font-bold lg:text-lg xl:text-xl"
-            >Conforto e Sofisticação</span
-          >
-        </li>
-
-        <li class="flex items-center gap-3 lg:gap-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="size-5 lg:size-7 xl:size-8 stroke-gold-premium drop-shadow-[0_3px_10px_rgba(0,0,0,0.9)]"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
-            />
-          </svg>
-
-          <span
-            class="[text-shadow:0_4px_14px_rgba(0,0,0,1)] font-bold lg:text-lg xl:text-xl"
-            >Segurança Avançada</span
-          >
-        </li>
-      </ul>
-    </div>
-    <!-- ÁREA INFERIOR DO HERO: CTAS E PROVAS SOCIAIS -->
-    <div class="mt-auto pb-4">
-      <!-- BOTÃO PRINCIPAL: SOLICITAR ORÇAMENTO -->
-      <a
-        href="{% url 'orcamento' %}"
-        class="block text-center bg-gold-premium rounded-md py-3 text-black font-semibold w-full cursor-pointer md:max-w-60 transition-all duration-300 hover:brightness-110 hover:scale-105 hover:shadow-xl"
-      >
-        SOLICITAR ORÇAMENTO
-      </a>
-      <!-- BOTÃO SECUNDÁRIO: FALAR NO WHATSAPP -->
-      <a
-        href="https://wa.me/5549991338651?text=Olá,%20gostaria%20de%20mais%20informações"
-        target="_blank"
-      >
-        <div
-          class="flex justify-center items-center cursor-pointer mt-3 border-2 border-gold-premium rounded-md bg-blue-dark py-3 text-white font-semibold w-full md:max-w-60 transition-all duration-300 hover:bg-gold-premium hover:text-black hover:scale-105 hover:shadow-lg"
+      <div class="pt-0 lg:pt-5">
+        <p
+          class="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-amber-400 lg:text-sm"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            fill="currentColor"
-            class="w-5 h-5 mr-2 transition-colors duration-300"
+          TRANSPORTE EXECUTIVO PREMIUM
+        </p>
+
+        <h1
+          class="max-w-[520px] text-[2.45rem] font-extrabold uppercase leading-[0.95] text-white [text-shadow:0_5px_18px_rgba(0,0,0,0.9)] lg:text-[4.35rem] xl:text-[4.8rem]"
+        >
+          Seu tempo &eacute; valioso.
+          <span class="block text-gold-premium">
+            A Prime Drive garante que ele n&atilde;o pare.
+          </span>
+        </h1>
+
+        <p
+          class="mt-3 max-w-[440px] text-sm font-medium leading-relaxed text-gray-100 lg:text-lg"
+        >
+          Mobilidade corporativa com conforto, seguran&ccedil;a, conectividade
+          total e transpar&ecirc;ncia em cada detalhe.
+        </p>
+
+        <div class="mt-5 grid grid-cols-1 gap-2 lg:grid-cols-4 lg:gap-0">
+          <div
+            class="flex max-w-[52%] items-center gap-3 rounded-md border border-white/10 bg-blue-dark/75 p-3 backdrop-blur-xl lg:block lg:max-w-none lg:rounded-none lg:border-0 lg:border-r lg:bg-transparent lg:p-0 lg:pr-5"
           >
-            <path
-              d="M16.02 3C8.86 3 3.04 8.82 3.04 15.98c0 2.3.6 4.54 1.75 6.51L3 29l6.68-1.75a12.9 12.9 0 0 0 6.34 1.62C23.18 28.87 29 23.05 29 15.89 29 8.74 23.18 3 16.02 3Zm0 23.67c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.96 1.04 1.06-3.86-.27-.43a10.7 10.7 0 0 1-1.63-5.63c0-6.03 4.91-10.94 10.94-10.94 2.92 0 5.67 1.14 7.73 3.2a10.86 10.86 0 0 1 3.21 7.65c0 6.03-4.91 10.78-10.94 10.78Zm6.01-8.19c-.33-.16-1.95-.96-2.25-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.25-.71.08-.33-.16-1.39-.51-2.65-1.63-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.14-.67.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.58 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.95-.8 2.23-1.57.27-.77.27-1.43.19-1.57-.08-.14-.3-.22-.63-.38Z"
-            />
-          </svg>
-
-          FALAR NO WHATSAPP
-        </div>
-      </a>
-      <!-- BLOCO DE PROVAS SOCIAIS / INDICADORES -->
-      <div class="py-6 flex gap-7 bg-blue-dark mt-5 rounded-md justify-around">
-        <!-- INDICADOR: CLIENTES SATISFEITOS -->
-        <!-- INDICADOR: PONTUALIDADE -->
-        <div class="text-center">
-          <div class="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              fill="none"
               stroke="currentColor"
-              class="size-5 stroke-gold-premium mr-1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-8 shrink-0 stroke-gold-premium lg:mb-3 lg:size-9"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
-              />
+              <path d="M5 13a10 10 0 0 1 14 0" />
+              <path d="M8.5 16.5a5 5 0 0 1 7 0" />
+              <path d="M2 9a15 15 0 0 1 20 0" />
+              <path d="M12 20h.01" />
             </svg>
-
-            <p class="text-3xl">1.000</p>
+            <div>
+              <h2 class="text-xs font-bold uppercase text-white lg:text-sm">
+                Internet a bordo
+              </h2>
+              <p
+                class="mt-1 text-[11px] leading-relaxed text-gray-300 lg:text-xs"
+              >
+                Starlink a bordo. Conectividade total em qualquer trajeto.
+              </p>
+            </div>
           </div>
-          <p class="text-xs font-semibold text-gray-500">
-            Clientes satisfeitos
-          </p>
-        </div>
 
-        <div class="text-center">
-          <div class="flex items-center">
+          <div
+            class="flex max-w-[52%] items-center gap-3 rounded-md border border-white/10 bg-blue-dark/75 p-3 backdrop-blur-xl lg:block lg:max-w-none lg:rounded-none lg:border-0 lg:border-r lg:bg-transparent lg:p-0 lg:px-5"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              fill="none"
               stroke="currentColor"
-              class="size-5 stroke-gold-premium mr-1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-8 shrink-0 stroke-gold-premium lg:mb-3 lg:size-9"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
+              <path d="M7 17h9.2a2 2 0 0 0 2-1.6L20 8" />
+              <path d="M5 17h2" />
+              <path d="M8 17v3" />
+              <path d="M18 17v3" />
+              <path d="M15 8V5a2 2 0 1 1 4 0v3" />
             </svg>
-            <p class="text-3xl">100%</p>
+            <div>
+              <h2 class="text-xs font-bold uppercase text-white lg:text-sm">
+                Conforto premium
+              </h2>
+              <p
+                class="mt-1 text-[11px] leading-relaxed text-gray-300 lg:text-xs"
+              >
+                Espa&ccedil;o, sil&ecirc;ncio e acabamento de alto
+                padr&atilde;o.
+              </p>
+            </div>
           </div>
-          <p class="text-xs font-semibold text-gray-500">Pontualidade</p>
-        </div>
 
-        <!-- INDICADOR: CIDADES ATENDIDAS -->
-        <!-- INDICADOR: AVALIAÇÃO MÉDIA -->
-        <div class="text-center hidden md:block">
-          <div class="flex items-center">
+          <div
+            class="flex max-w-[52%] items-center gap-3 rounded-md border border-white/10 bg-blue-dark/75 p-3 backdrop-blur-xl lg:block lg:max-w-none lg:rounded-none lg:border-0 lg:border-r lg:bg-transparent lg:p-0 lg:px-5"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              fill="none"
               stroke="currentColor"
-              class="size-5 stroke-gold-premium mr-1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-8 shrink-0 stroke-gold-premium lg:mb-3 lg:size-9"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
               />
+              <path d="m9 12 2 2 4-4" />
             </svg>
-            <p class="text-3xl">+50</p>
+            <div>
+              <h2 class="text-xs font-bold uppercase text-white lg:text-sm">
+                Seguran&ccedil;a avan&ccedil;ada
+              </h2>
+              <p
+                class="mt-1 text-[11px] leading-relaxed text-gray-300 lg:text-xs"
+              >
+                Motorista qualificado e tecnologia para sua tranquilidade.
+              </p>
+            </div>
           </div>
-          <p class="text-xs font-semibold text-gray-500">Cidades atendidas</p>
-        </div>
 
-        <div class="text-center hidden md:block">
-          <div class="flex items-center">
+          <div
+            class="flex max-w-[52%] items-center gap-3 rounded-md border border-white/10 bg-blue-dark/75 p-3 backdrop-blur-xl lg:block lg:max-w-none lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:pl-5"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              fill="none"
               stroke="currentColor"
-              class="size-5 stroke-gold-premium mr-1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-8 shrink-0 stroke-gold-premium lg:mb-3 lg:size-9"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <path d="M14 2v6h6" />
+              <path d="M8 13h8" />
+              <path d="M8 17h5" />
+            </svg>
+            <div>
+              <h2 class="text-xs font-bold uppercase text-white lg:text-sm">
+                Transpar&ecirc;ncia total
+              </h2>
+              <p
+                class="mt-1 text-[11px] leading-relaxed text-gray-300 lg:text-xs"
+              >
+                Relat&oacute;rios, roteiros, custos e hor&aacute;rios claros.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 hidden items-center gap-4 lg:flex">
+          <a
+            href="{% url 'orcamento' %}"
+            class="flex w-64 items-center justify-center gap-3 rounded-md bg-gold-premium px-5 py-3 text-sm font-bold uppercase text-black transition hover:brightness-110 hover:shadow-xl"
+          >
+            Solicitar or&ccedil;amento
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-4"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+          <a
+            href="https://wa.me/5549991338651?text=Ola%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex w-52 items-center justify-center gap-2 rounded-md border border-gold-premium px-5 py-3 text-sm font-semibold uppercase text-white transition hover:bg-gold-premium hover:text-black"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              fill="currentColor"
+              class="size-4"
+            >
+              <path
+                d="M16.02 3C8.86 3 3.04 8.82 3.04 15.98c0 2.3.6 4.54 1.75 6.51L3 29l6.68-1.75a12.9 12.9 0 0 0 6.34 1.62C23.18 28.87 29 23.05 29 15.89 29 8.74 23.18 3 16.02 3Zm0 23.67c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.96 1.04 1.06-3.86-.27-.43a10.7 10.7 0 0 1-1.63-5.63c0-6.03 4.91-10.94 10.94-10.94 2.92 0 5.67 1.14 7.73 3.2a10.86 10.86 0 0 1 3.21 7.65c0 6.03-4.91 10.78-10.94 10.78Zm6.01-8.19c-.33-.16-1.95-.96-2.25-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.25-.71.08-.33-.16-1.39-.51-2.65-1.63-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.14-.67.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.58 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.95-.8 2.23-1.57.27-.77.27-1.43.19-1.57-.08-.14-.3-.22-.63-.38Z"
               />
             </svg>
+            Falar no WhatsApp
+          </a>
+        </div>
 
-            <p class="text-3xl">5</p>
+        <div
+          class="mt-4 hidden flex-wrap items-center gap-5 text-xs text-gray-300 lg:flex"
+        >
+          <span class="flex items-center gap-2">
+            <span class="text-gold-premium">&#9635;</span> Atendimento
+            corporativo
+          </span>
+          <span class="h-4 w-[1px] bg-white/20"></span>
+          <span class="flex items-center gap-2">
+            <span class="text-gold-premium">&#9635;</span> Nota fiscal
+          </span>
+          <span class="h-4 w-[1px] bg-white/20"></span>
+          <span class="flex items-center gap-2">
+            <span class="text-gold-premium">&#9635;</span> Contratos
+            personalizados
+          </span>
+        </div>
+
+      </div>
+
+      <div class="relative min-h-0 lg:min-h-0">
+        <div
+          class="absolute right-2 top-10 hidden max-w-[310px] rounded-md border border-gold-premium/40 bg-blue-dark/80 p-5 shadow-2xl shadow-gold-premium/10 backdrop-blur-xl lg:block xl:right-20"
+        >
+          <div class="flex gap-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-16 shrink-0 stroke-gold-premium"
+            >
+              <path d="m13.5 6.5 4 4" />
+              <path d="m10 10 4 4" />
+              <path d="M8 2l14 14" />
+              <path d="M2 8l14 14" />
+              <path d="m16 5 3-3 3 3-3 3" />
+              <path d="m2 19 3-3 3 3-3 3" />
+            </svg>
+            <div>
+              <h2 class="text-sm font-bold uppercase text-gold-premium">
+                Trabalhe sem limites
+              </h2>
+              <p class="mt-2 text-sm leading-relaxed text-gray-200">
+                Com internet via Starlink, voc&ecirc; participa de
+                reuni&otilde;es, acessa sistemas e toma decis&otilde;es de
+                qualquer lugar.
+              </p>
+            </div>
           </div>
-          <p class="text-xs font-semibold text-gray-500">Avaliação média</p>
+        </div>
+
+        <div
+          class="-mt-52 ml-[48%] w-[52%] rounded-md border border-gold-premium/50 bg-blue-dark/85 p-3 shadow-xl shadow-black/40 backdrop-blur-xl lg:hidden"
+        >
+          <div class="flex gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-7 shrink-0 stroke-gold-premium"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <path d="M14 2v6h6" />
+              <path d="M8 13h8" />
+              <path d="M8 17h5" />
+            </svg>
+            <div>
+              <h2 class="text-xs font-bold uppercase text-gold-premium">
+                Trabalhe sem limites
+              </h2>
+              <p class="mt-2 text-[10px] leading-relaxed text-gray-200">
+                Com internet via Starlink, voc&ecirc; participa de
+                reuni&otilde;es, acessa sistemas e toma decis&otilde;es de
+                qualquer lugar.
+              </p>
+            </div>
+          </div>
+
+          <ul class="mt-3 space-y-2 text-[10px] text-gray-200">
+            <li class="flex items-center gap-2">
+              <span class="text-gold-premium">&#9678;</span> Conex&atilde;o
+              est&aacute;vel em qualquer rota
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-gold-premium">&#9678;</span> Ideal para
+              reuni&otilde;es e downloads
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-gold-premium">&#9678;</span> Cobertura total
+              mesmo em &aacute;reas remotas
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+
+    <div class="mt-4 flex flex-col gap-2 lg:hidden">
+      <a
+        href="{% url 'orcamento' %}"
+        class="flex items-center justify-center gap-3 rounded-md bg-gold-premium px-4 py-3 text-xs font-bold uppercase text-black"
+      >
+        Solicitar or&ccedil;amento
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="size-4"
+        >
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </a>
+      <a
+        href="https://wa.me/5549991338651?text=Ola%2C%20gostaria%20de%20solicitar%20um%20transporte%20executivo."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center gap-2 rounded-md border border-gold-premium px-4 py-3 text-xs font-semibold uppercase text-white"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          fill="currentColor"
+          class="size-4"
+        >
+          <path
+            d="M16.02 3C8.86 3 3.04 8.82 3.04 15.98c0 2.3.6 4.54 1.75 6.51L3 29l6.68-1.75a12.9 12.9 0 0 0 6.34 1.62C23.18 28.87 29 23.05 29 15.89 29 8.74 23.18 3 16.02 3Zm0 23.67c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.96 1.04 1.06-3.86-.27-.43a10.7 10.7 0 0 1-1.63-5.63c0-6.03 4.91-10.94 10.94-10.94 2.92 0 5.67 1.14 7.73 3.2a10.86 10.86 0 0 1 3.21 7.65c0 6.03-4.91 10.78-10.94 10.78Zm6.01-8.19c-.33-.16-1.95-.96-2.25-1.07-.3-.11-.52-.16-.74.16-.22.33-.85 1.07-1.04 1.29-.19.22-.38.25-.71.08-.33-.16-1.39-.51-2.65-1.63-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.14-.67.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.58 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.95-.8 2.23-1.57.27-.77.27-1.43.19-1.57-.08-.14-.3-.22-.63-.38Z"
+          />
+        </svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+
+    <div
+      class="mt-3 flex items-center justify-between gap-2 text-[10px] text-gray-300 lg:hidden"
+    >
+      <span>&#9635; Atendimento corporativo</span>
+      <span class="h-4 w-[1px] bg-white/20"></span>
+      <span>&#9635; Nota fiscal</span>
+      <span class="h-4 w-[1px] bg-white/20"></span>
+      <span>&#9635; Contratos personalizados</span>
+    </div>
+  </div>
+  </div>
+
+  <div class="relative z-10 bg-blue-deep px-5 py-6 lg:px-6 lg:py-8">
+  <div class="container mx-auto">
+    <div class="mx-auto mb-6 max-w-3xl text-center lg:mb-8">
+      <p
+        class="text-xs font-semibold uppercase tracking-[0.28em] text-amber-400 lg:text-sm"
+      >
+        Decis&atilde;o inteligente
+      </p>
+      <h2
+        class="mt-3 text-3xl font-black uppercase leading-tight text-white lg:text-5xl"
+      >
+        5 motivos para n&atilde;o alugar um ve&iacute;culo na sua pr&oacute;xima agenda
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-gray-300 lg:text-base">
+        Alugar parece simples at&eacute; entrar na conta o tempo perdido, a
+        responsabilidade da dire&ccedil;&atilde;o, o desgaste e a falta de
+        previsibilidade no trajeto.
+      </p>
+    </div>
+
+    <div
+      class="grid gap-4 rounded-md border border-white/10 bg-blue-dark/80 p-4 shadow-2xl shadow-black/40 backdrop-blur-xl lg:grid-cols-2 lg:p-6"
+    >
+      <div class="rounded-md border border-red-400/20 bg-red-950/10 p-4 lg:p-5">
+        <h2
+          class="text-xs font-black uppercase tracking-[0.28em] text-red-100 lg:text-sm"
+        >
+          Alugar um carro
+        </h2>
+
+        <div class="mt-4 grid gap-3">
+          <div class="rounded-md border border-white/10 bg-blue-deep/75 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">1. Voc&ecirc; vira o motorista</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-400 lg:text-sm">
+              Depois de uma reuni&atilde;o, voo ou compromisso longo, ainda precisa dirigir.
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-deep/75 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">2. Perda de produtividade no trabalho</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-400 lg:text-sm">
+              Dirigir impede liga&ccedil;&otilde;es, respostas, revis&otilde;es e decis&otilde;es
+              durante o deslocamento.
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-deep/75 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">3. Burocracia entra no roteiro</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-400 lg:text-sm">
+              Retirada, devolu&ccedil;&atilde;o, cau&ccedil;&atilde;o, estacionamento e abastecimento tomam tempo.
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-deep/75 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">4. A responsabilidade fica com voc&ecirc;</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-400 lg:text-sm">
+              Rota, tr&acirc;nsito, seguran&ccedil;a, estrada e imprevistos viram sua preocupa&ccedil;&atilde;o.
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-deep/75 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">5. O custo real aparece depois</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-400 lg:text-sm">
+              Di&aacute;rias, seguros, taxas, combust&iacute;vel e tempo parado podem pesar mais.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="rounded-md border border-gold-premium/35 bg-gradient-to-b from-gold-premium/15 to-blue-deep/75 p-4 shadow-xl shadow-gold-premium/10 lg:p-5"
+      >
+        <h2
+          class="text-xs font-black uppercase tracking-[0.28em] text-gold-premium lg:text-sm"
+        >
+          Contratar a Prime Drive
+        </h2>
+
+        <div class="mt-4 grid gap-3">
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/80 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">1. Motorista profissional &agrave; disposi&ccedil;&atilde;o</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-300 lg:text-sm">
+              Voc&ecirc; chega com postura executiva, sem desgaste de dire&ccedil;&atilde;o.
+            </p>
+          </div>
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/80 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">2. Trabalhe enquanto viaja com conectividade</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-300 lg:text-sm">
+              Com internet a bordo, voc&ecirc; atende, responde, acessa sistemas
+              e segue produtivo no caminho.
+            </p>
+          </div>
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/80 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">3. Ve&iacute;culo pronto, limpo e confort&aacute;vel</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-300 lg:text-sm">
+              Nada de fila, balc&atilde;o ou improviso. A experi&ecirc;ncia come&ccedil;a no embarque.
+            </p>
+          </div>
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/80 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">4. Pontualidade e seguran&ccedil;a no centro</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-300 lg:text-sm">
+              Rota planejada, condu&ccedil;&atilde;o cuidadosa e aten&ccedil;&atilde;o ao hor&aacute;rio.
+            </p>
+          </div>
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/80 p-3 lg:p-4">
+            <p class="text-sm font-bold text-white">5. Or&ccedil;amento claro antes da viagem</p>
+            <p class="mt-1 text-xs leading-relaxed text-gray-300 lg:text-sm">
+              Transpar&ecirc;ncia para viagens regionais, agenda corporativa, eventos e transfers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mt-4 rounded-lg border border-white/10 bg-blue-dark/80 p-3 shadow-2xl shadow-black/40 backdrop-blur-xl lg:mt-6 lg:rounded-md lg:p-5"
+    >
+      <div class="mb-4 flex items-center justify-center gap-4">
+        <span class="hidden h-[1px] w-10 bg-gold-premium/60 lg:block"></span>
+        <h2
+          class="text-center text-xs font-bold uppercase text-gold-premium lg:text-sm"
+        >
+          <span class="lg:hidden">Solu&ccedil;&otilde;es para sua empresa</span>
+          <span class="hidden lg:inline"
+            >Solu&ccedil;&otilde;es que resolvem as dores da sua empresa</span
+          >
+        </h2>
+        <span class="hidden h-[1px] w-10 bg-gold-premium/60 lg:block"></span>
+      </div>
+
+      <div class="grid grid-cols-5 gap-2 lg:grid-cols-6 lg:gap-0">
+        <div
+          class="px-1 text-center lg:flex lg:gap-4 lg:border-r lg:border-white/15 lg:px-6 lg:text-left"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mx-auto size-7 stroke-gold-premium lg:mx-0 lg:size-10"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          <div>
+            <h3
+              class="mt-2 text-[10px] font-bold text-white lg:mt-0 lg:text-sm"
+            >
+              Pontualidade garantida
+            </h3>
+            <p
+              class="hidden text-xs leading-relaxed text-gray-400 lg:mt-2 lg:block"
+            >
+              Planejamento de rota para reduzir atrasos, improvisos e perda de
+              tempo.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="px-1 text-center lg:flex lg:gap-4 lg:border-r lg:border-white/15 lg:px-6 lg:text-left"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mx-auto size-7 stroke-gold-premium lg:mx-0 lg:size-10"
+          >
+            <path d="M3 3v18h18" />
+            <path d="m7 15 4-4 3 3 5-7" />
+            <path d="M14 7h5v5" />
+          </svg>
+          <div>
+            <h3
+              class="mt-2 text-[10px] font-bold text-white lg:mt-0 lg:text-sm"
+            >
+              Controle de custos
+            </h3>
+            <p
+              class="hidden text-xs leading-relaxed text-gray-400 lg:mt-2 lg:block"
+            >
+              Relat&oacute;rios detalhados de cada viagem com total
+              transpar&ecirc;ncia.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="px-1 text-center lg:flex lg:gap-4 lg:border-r lg:border-white/15 lg:px-6 lg:text-left"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mx-auto size-7 stroke-gold-premium lg:mx-0 lg:size-10"
+          >
+            <path d="M8 2v4" />
+            <path d="M16 2v4" />
+            <rect width="18" height="18" x="3" y="4" rx="2" />
+            <path d="M3 10h18" />
+          </svg>
+          <div>
+            <h3
+              class="mt-2 text-[10px] font-bold text-white lg:mt-0 lg:text-sm"
+            >
+              Agendamento complexo
+            </h3>
+            <p
+              class="hidden text-xs leading-relaxed text-gray-400 lg:mt-2 lg:block"
+            >
+              Agendamento online, hist&oacute;rico de viagens e suporte
+              especializado.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="px-1 text-center lg:flex lg:gap-4 lg:border-r lg:border-white/15 lg:px-6 lg:text-left"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mx-auto size-7 stroke-gold-premium lg:mx-0 lg:size-10"
+          >
+            <path d="M10 6V5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1" />
+            <rect width="18" height="14" x="3" y="6" rx="2" />
+            <path d="M3 12h18" />
+          </svg>
+          <div>
+            <h3
+              class="mt-2 text-[10px] font-bold text-white lg:mt-0 lg:text-sm"
+            >
+              Produtividade em tr&acirc;nsito
+            </h3>
+            <p
+              class="hidden text-xs leading-relaxed text-gray-400 lg:mt-2 lg:block"
+            >
+              Ambiente confort&aacute;vel, silencioso e conectado para voc&ecirc;
+              seguir operando enquanto viaja.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="px-1 text-center lg:flex lg:gap-4 lg:border-r lg:border-white/15 lg:px-6 lg:text-left"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mx-auto size-7 stroke-gold-premium lg:mx-0 lg:size-10"
+          >
+            <path
+              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+            />
+          </svg>
+          <div>
+            <h3
+              class="mt-2 text-[10px] font-bold text-white lg:mt-0 lg:text-sm"
+            >
+              Seguran&ccedil;a em primeiro lugar
+            </h3>
+            <p
+              class="hidden text-xs leading-relaxed text-gray-400 lg:mt-2 lg:block"
+            >
+              Motorista treinado e ve&iacute;culo revisado para sua
+              tranquilidade.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="hidden px-1 text-center lg:flex lg:gap-4 lg:px-6 lg:text-left"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mx-auto size-7 stroke-gold-premium lg:mx-0 lg:size-10"
+          >
+            <path d="M3 11a9 9 0 0 1 18 0" />
+            <path d="M21 16v-5" />
+            <path d="M3 16v-5" />
+            <path
+              d="M7 16h-.5A2.5 2.5 0 0 1 4 13.5v0A2.5 2.5 0 0 1 6.5 11H7Z"
+            />
+            <path
+              d="M17 16h.5a2.5 2.5 0 0 0 2.5-2.5v0a2.5 2.5 0 0 0-2.5-2.5H17Z"
+            />
+          </svg>
+          <div>
+            <h3
+              class="mt-2 text-[10px] font-bold text-white lg:mt-0 lg:text-sm"
+            >
+              Atendimento que entende sua rotina
+            </h3>
+            <p
+              class="hidden text-xs leading-relaxed text-gray-400 lg:mt-2 lg:block"
+            >
+              Suporte corporativo &aacute;gil, discreto e focado na sua
+              opera&ccedil;&atilde;o.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-4 grid grid-cols-2 gap-2 border-t border-white/10 pt-4 lg:hidden"
+      >
+        <div class="border-r border-white/10 text-center">
+          <p class="text-sm font-bold text-white">Conectividade</p>
+          <p class="text-[9px] text-gray-400">Starlink a bordo</p>
+        </div>
+        <div class="text-center">
+          <p class="text-sm font-bold text-white">Previsibilidade</p>
+          <p class="text-[9px] text-gray-400">rota e agenda alinhadas</p>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 

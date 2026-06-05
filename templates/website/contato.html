@@ -1,51 +1,49 @@
 {% extends 'base.html' %} {% block 'conteudo' %}
 
-<section
-  class="relative min-h-[calc(100dvh-64px)] overflow-hidden bg-blue-deep bg-[url('/static/assets/img/suv-noite-mobile.png')] bg-cover bg-[60%_top] bg-no-repeat lg:bg-none"
->
-  <img
-    src="/static/assets/img/suv-noite.png"
-    alt=""
-    class="pointer-events-none absolute bottom-0 right-0 z-0 hidden h-full w-[62%] object-cover object-center opacity-70 lg:block"
-  />
+<section class="bg-blue-deep">
   <div
-    class="absolute inset-0 z-0 bg-gradient-to-b from-blue-deep/90 via-blue-deep/80 to-blue-deep lg:bg-gradient-to-r lg:from-blue-deep lg:via-blue-deep/70 lg:to-blue-deep/15"
-  ></div>
-  <div
-    class="pointer-events-none absolute inset-y-0 left-[38%] z-0 hidden w-[32%] bg-gradient-to-r from-blue-deep via-blue-deep/80 to-transparent lg:block"
-  ></div>
-  <div
-    class="pointer-events-none absolute inset-x-0 bottom-0 z-0 hidden h-1/3 bg-gradient-to-t from-blue-deep to-transparent lg:block"
-  ></div>
-
-  <div
-    class="container relative z-10 mx-auto grid grid-cols-1 gap-7 px-6 py-8 lg:grid-cols-[minmax(0,560px)_minmax(360px,460px)] lg:items-start lg:justify-center lg:gap-16 lg:py-10 xl:gap-20"
+    class="relative overflow-hidden bg-[url('/static/assets/img/suv-noite-mobile.png')] bg-cover bg-[58%_top] bg-no-repeat lg:bg-[url('/static/assets/img/suv-noite.png')] lg:bg-center"
   >
-    <div class="lg:max-w-[560px]">
-      <h1
-        class="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-amber-400 xl:text-base"
-      >
-        CONTATO
-      </h1>
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-blue-deep/85 via-blue-deep/75 to-blue-deep lg:bg-gradient-to-r lg:from-blue-deep lg:via-blue-deep/80 lg:to-blue-deep/25"
+    ></div>
+    <div
+      class="pointer-events-none absolute inset-x-0 bottom-0 hidden h-1/2 bg-gradient-to-t from-blue-deep via-blue-deep/80 to-transparent lg:block"
+    ></div>
 
-      <p class="mb-3 max-w-[420px] text-3xl font-light leading-tight lg:max-w-[520px] xl:text-5xl">
-        Estamos prontos para te atender.
-      </p>
+    <div
+      class="container relative z-10 mx-auto grid grid-cols-1 gap-8 px-6 py-10 lg:grid-cols-[minmax(0,620px)_minmax(360px,500px)] lg:items-center lg:gap-14 lg:py-14 xl:gap-20"
+    >
+      <div>
+        <p
+          class="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-amber-400 lg:text-sm"
+        >
+          Contato Prime Drive
+        </p>
 
-      <div class="my-5 h-[1px] w-16 bg-gold-premium lg:my-6 lg:w-24"></div>
+        <h1
+          class="max-w-[650px] text-4xl font-black uppercase leading-[0.96] text-white [text-shadow:0_5px_18px_rgba(0,0,0,0.9)] lg:text-6xl"
+        >
+          Precisa de transporte executivo?
+          <span class="block text-gold-premium">Fale com quem resolve.</span>
+        </h1>
 
-      <p class="max-w-[520px] text-sm leading-relaxed text-gray-200 xl:text-lg">
-        Fale conosco e descubra como tornar sua experi&ecirc;ncia de transporte
-        ainda mais confort&aacute;vel, segura e exclusiva.
-      </p>
+        <div class="my-6 h-px w-24 bg-gold-premium"></div>
 
-      <div
-        class="mt-6 flex flex-col justify-center rounded-md border border-white/10 bg-gray-dark/90 p-4 backdrop-blur-xl lg:mt-7 lg:p-5"
-      >
-        <div class="flex items-center gap-4 border-b border-white/10 pb-4">
-          <span
-            class="contact-icon-circle flex size-10 shrink-0 items-center justify-center rounded-full border border-gold-premium"
+        <p class="max-w-[560px] text-sm leading-relaxed text-gray-200 lg:text-lg">
+          Atendimento direto para viagens, transfers, agendas corporativas e
+          deslocamentos especiais. Explique sua necessidade e receba orienta&ccedil;&atilde;o
+          com clareza, discri&ccedil;&atilde;o e agilidade.
+        </p>
+
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="https://wa.me/5549991338651?text=Ola%2C%20gostaria%20de%20falar%20com%20a%20Prime%20Drive."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 rounded-md bg-gold-premium px-6 py-3 text-sm font-black uppercase text-black transition hover:brightness-110"
           >
+            Chamar no WhatsApp
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -54,28 +52,164 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="size-5 stroke-gold-premium"
+              class="size-4"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+
+          <a
+            href="{% url 'orcamento' %}"
+            class="flex items-center justify-center rounded-md border border-gold-premium px-6 py-3 text-sm font-bold uppercase text-white transition hover:bg-gold-premium hover:text-black"
+          >
+            Solicitar or&ccedil;amento
+          </a>
+        </div>
+
+        <div class="mt-7 grid gap-3 sm:grid-cols-3">
+          <div class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl">
+            <p class="text-2xl font-black text-gold-premium">R&aacute;pido</p>
+            <p class="mt-1 text-xs font-semibold uppercase text-white">
+              resposta direta
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl">
+            <p class="text-2xl font-black text-gold-premium">Seguro</p>
+            <p class="mt-1 text-xs font-semibold uppercase text-white">
+              atendimento discreto
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl">
+            <p class="text-2xl font-black text-gold-premium">Claro</p>
+            <p class="mt-1 text-xs font-semibold uppercase text-white">
+              pr&oacute;ximo passo definido
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="rounded-md border border-white/10 bg-blue-dark/80 p-4 shadow-2xl shadow-black/50 backdrop-blur-xl sm:p-6"
+      >
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.24em] text-amber-400"
+        >
+          Envie uma mensagem
+        </p>
+        <p class="mt-2 text-sm leading-relaxed text-gray-300">
+          Conte o que voc&ecirc; precisa. A mensagem ser&aacute; enviada diretamente
+          para o WhatsApp da Prime Drive.
+        </p>
+
+        <form id="form-contato" action="" class="mt-5 flex flex-col gap-3">
+          <label
+            class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
+          >
+            <input
+              id="contato-nome"
+              type="text"
+              name="nome"
+              placeholder="Nome"
+              class="h-12 w-full bg-transparent text-sm text-white outline-none placeholder:text-gray-500"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-5 shrink-0"
+            >
+              <path d="M18 20a6 6 0 0 0-12 0" />
+              <circle cx="12" cy="10" r="4" />
+            </svg>
+          </label>
+
+          <label
+            class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
+          >
+            <input
+              id="contato-email"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              class="h-12 w-full bg-transparent text-sm text-white outline-none placeholder:text-gray-500"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-5 shrink-0"
+            >
+              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+            </svg>
+          </label>
+
+          <label
+            class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
+          >
+            <input
+              id="contato-telefone"
+              type="tel"
+              name="telefone"
+              placeholder="Telefone / WhatsApp"
+              class="h-12 w-full bg-transparent text-sm text-white outline-none placeholder:text-gray-500"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-5 shrink-0"
             >
               <path
                 d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
               />
             </svg>
-          </span>
+          </label>
 
-          <div>
-            <h2 class="mb-1 text-sm font-semibold text-gray-200 lg:text-base">
-              Telefone / WhatsApp
-            </h2>
-            <p class="text-xs leading-relaxed text-gray-500 lg:text-sm">
-              (49) 99133-8651
-            </p>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-4 border-b border-white/10 py-4">
-          <span
-            class="contact-icon-circle flex size-10 shrink-0 items-center justify-center rounded-full border border-gold-premium"
+          <label
+            class="flex items-start gap-3 rounded-md border border-white/10 bg-blue-deep/70 px-4 py-3 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
           >
+            <textarea
+              id="contato-mensagem"
+              name="mensagem"
+              placeholder="Mensagem"
+              rows="5"
+              class="w-full resize-none bg-transparent text-sm text-white outline-none placeholder:text-gray-500"
+            ></textarea>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="mt-1 size-5 shrink-0"
+            >
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+            </svg>
+          </label>
+
+          <button
+            id="btn-contato"
+            type="button"
+            class="mt-1 flex items-center justify-center gap-3 rounded-md bg-gold-premium px-4 py-4 text-sm font-black uppercase text-black transition-all duration-300 hover:brightness-110 hover:shadow-xl"
+          >
+            Enviar pelo WhatsApp
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -84,292 +218,108 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="size-5 stroke-gold-premium"
+              class="size-4"
             >
-              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
             </svg>
-          </span>
+          </button>
 
-          <div>
-            <h2 class="mb-1 text-sm font-semibold text-gray-200 lg:text-base">
-              E-mail
-            </h2>
-            <p class="text-xs leading-relaxed text-gray-500 lg:text-sm">
-              maiquelalves@hotmail.com
-            </p>
-          </div>
-        </div>
+          <p class="mt-2 flex items-center justify-center gap-2 text-xs text-gray-300">
+            <span class="text-gold-premium">&#9635;</span>
+            Seus dados s&atilde;o usados apenas para retorno do atendimento.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
 
-        <div class="flex items-center gap-4 border-b border-white/10 py-4">
-          <span
-            class="contact-icon-circle flex size-10 shrink-0 items-center justify-center rounded-full border border-gold-premium"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="size-5 stroke-gold-premium"
-            >
-              <path
-                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
-              />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-          </span>
-
-          <div>
-            <h2 class="mb-1 text-sm font-semibold text-gray-200 lg:text-base">
-              Endere&ccedil;o
-            </h2>
-            <p class="text-xs leading-relaxed text-gray-500 lg:text-sm">
-              Chapec&oacute; - SC
-            </p>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-4 pt-4">
-          <span
-            class="contact-icon-circle flex size-10 shrink-0 items-center justify-center rounded-full border border-gold-premium"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="size-5 stroke-gold-premium"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" />
-            </svg>
-          </span>
-
-          <div>
-            <h2 class="mb-1 text-sm font-semibold text-gray-200 lg:text-base">
-              Hor&aacute;rio de atendimento
-            </h2>
-            <div
-              class="flex flex-col gap-1 text-xs leading-relaxed text-gray-500 lg:flex-row lg:flex-wrap lg:items-center lg:text-sm"
-            >
-              <p>Segunda a Sexta: 8h &agrave;s 20h</p>
-              <span class="hidden text-gold-premium lg:inline">&bull;</span>
-              <p>S&aacute;bado: 8h &agrave;s 14h</p>
-            </div>
-          </div>
-        </div>
+  <div class="container mx-auto px-6 py-10 lg:py-14">
+    <div class="grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <div>
+        <p
+          class="text-xs font-semibold uppercase tracking-[0.28em] text-amber-400 lg:text-sm"
+        >
+          Canais de atendimento
+        </p>
+        <h2 class="mt-3 text-3xl font-black uppercase leading-tight text-white lg:text-5xl">
+          O primeiro contato j&aacute; precisa transmitir confian&ccedil;a.
+        </h2>
+        <p class="mt-4 max-w-xl text-sm leading-relaxed text-gray-400 lg:text-base">
+          Seja para uma viagem regional, compromisso executivo, transfer ou
+          agenda recorrente, a Prime Drive organiza o atendimento com foco em
+          seguran&ccedil;a, pontualidade e transpar&ecirc;ncia.
+        </p>
       </div>
 
-      <div class="mt-4 hidden grid-cols-2 gap-4 lg:grid">
-        <div
-          class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-dark/60 p-4 backdrop-blur-xl"
+      <div class="grid gap-3 sm:grid-cols-2">
+        <a
+          href="https://wa.me/5549991338651?text=Ola%2C%20gostaria%20de%20falar%20com%20a%20Prime%20Drive."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-md border border-gold-premium/35 bg-blue-dark/80 p-5 transition hover:-translate-y-1 hover:border-gold-premium"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="size-6 shrink-0 stroke-gold-premium"
-          >
-            <path
-              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-            />
-            <path d="m9 12 2 2 4-4" />
-          </svg>
-          <p class="text-sm font-medium text-gray-200">
-            Atendimento seguro<br />e confidencial
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium">
+            WhatsApp
+          </p>
+          <p class="mt-3 text-xl font-bold text-white">(49) 99133-8651</p>
+          <p class="mt-2 text-sm text-gray-400">
+            Canal mais r&aacute;pido para alinhar sua necessidade.
+          </p>
+        </a>
+
+        <div class="rounded-md border border-white/10 bg-blue-dark/80 p-5">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium">
+            E-mail
+          </p>
+          <p class="mt-3 text-xl font-bold text-white">maiquelalves@hotmail.com</p>
+          <p class="mt-2 text-sm text-gray-400">
+            Ideal para demandas corporativas e informa&ccedil;&otilde;es detalhadas.
           </p>
         </div>
 
-        <div
-          class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-dark/60 p-4 backdrop-blur-xl"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="size-6 shrink-0 stroke-gold-premium"
-          >
-            <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
-            <path d="M8 9h8" />
-            <path d="M8 13h5" />
-          </svg>
-          <p class="text-sm font-medium text-gray-200">
-            Resposta r&aacute;pida<br />e personalizada
+        <div class="rounded-md border border-white/10 bg-blue-dark/80 p-5">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium">
+            Atendimento
+          </p>
+          <p class="mt-3 text-xl font-bold text-white">8h &agrave;s 20h</p>
+          <p class="mt-2 text-sm text-gray-400">
+            Segunda a sexta. S&aacute;bado das 8h &agrave;s 14h.
+          </p>
+        </div>
+
+        <div class="rounded-md border border-white/10 bg-blue-dark/80 p-5">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium">
+            Regi&atilde;o
+          </p>
+          <p class="mt-3 text-xl font-bold text-white">Chapec&oacute; - SC</p>
+          <p class="mt-2 text-sm text-gray-400">
+            Atendimento para Chapec&oacute;, regi&atilde;o e viagens sob consulta.
           </p>
         </div>
       </div>
     </div>
 
-    <div
-      class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl lg:mt-0 lg:w-full lg:p-6 xl:p-7"
-    >
-      <h2
-        class="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-amber-400 xl:text-base"
-      >
-        ENVIE UMA MENSAGEM
-      </h2>
-
-      <form id="form-contato" action="" class="flex flex-col gap-3">
-        <label
-          class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-deep/60 px-4 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
-        >
-          <input
-            id="contato-nome"
-            type="text"
-            name="nome"
-            placeholder="Nome"
-            class="h-12 w-full bg-transparent text-sm text-white outline-none placeholder:text-gray-500"
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="size-5 shrink-0"
-          >
-            <path d="M18 20a6 6 0 0 0-12 0" />
-            <circle cx="12" cy="10" r="4" />
-            <circle cx="12" cy="12" r="10" />
-          </svg>
-        </label>
-
-        <label
-          class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-deep/60 px-4 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
-        >
-          <input
-            id="contato-email"
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            class="h-12 w-full bg-transparent text-sm text-white outline-none placeholder:text-gray-500"
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="size-5 shrink-0"
-          >
-            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-          </svg>
-        </label>
-
-        <label
-          class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-deep/60 px-4 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
-        >
-          <input
-            id="contato-telefone"
-            type="tel"
-            name="telefone"
-            placeholder="Telefone / WhatsApp"
-            class="h-12 w-full bg-transparent text-sm text-white outline-none placeholder:text-gray-500"
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="size-5 shrink-0"
-          >
-            <path
-              d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
-            />
-          </svg>
-        </label>
-
-        <label
-          class="flex items-start gap-3 rounded-md border border-white/10 bg-blue-deep/60 px-4 py-3 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
-        >
-          <textarea
-            id="contato-mensagem"
-            name="mensagem"
-            placeholder="Mensagem"
-            rows="5"
-            class="w-full resize-none bg-transparent text-sm text-white outline-none placeholder:text-gray-500"
-          ></textarea>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="mt-1 size-5 shrink-0"
-          >
-            <path
-              d="M12 20h9"
-            />
-            <path
-              d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"
-            />
-          </svg>
-        </label>
-
-        <button
-          id="btn-contato"
-          type="button"
-          class="mt-1 flex items-center justify-center gap-3 rounded-md bg-gold-premium px-4 py-3 text-sm font-bold uppercase text-black transition-all duration-300 hover:brightness-110 hover:shadow-xl"
-        >
-          Enviar mensagem
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="size-4"
-          >
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-          </svg>
-        </button>
-
-        <p class="mt-2 flex items-center justify-center gap-2 text-xs text-gray-300">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="size-4 stroke-gold-premium"
-          >
-            <path
-              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-            />
-            <path d="m9 12 2 2 4-4" />
-          </svg>
-          Seus dados est&atilde;o seguros conosco.
+    <div class="mt-8 grid gap-4 lg:grid-cols-3">
+      <div class="rounded-md border border-white/10 bg-blue-dark/70 p-5">
+        <p class="text-lg font-bold text-white">Conte sua agenda</p>
+        <p class="mt-2 text-sm leading-relaxed text-gray-400">
+          Origem, destino, data, hor&aacute;rio, passageiros e qualquer ponto de
+          aten&ccedil;&atilde;o.
         </p>
-      </form>
+      </div>
+      <div class="rounded-md border border-white/10 bg-blue-dark/70 p-5">
+        <p class="text-lg font-bold text-white">Receba orienta&ccedil;&atilde;o</p>
+        <p class="mt-2 text-sm leading-relaxed text-gray-400">
+          Avaliamos a melhor forma de atender com previsibilidade e discri&ccedil;&atilde;o.
+        </p>
+      </div>
+      <div class="rounded-md border border-gold-premium/35 bg-gold-premium/10 p-5">
+        <p class="text-lg font-bold text-white">Confirme com seguran&ccedil;a</p>
+        <p class="mt-2 text-sm leading-relaxed text-gray-300">
+          Voc&ecirc; sabe o pr&oacute;ximo passo antes da viagem acontecer.
+        </p>
+      </div>
     </div>
   </div>
 </section>

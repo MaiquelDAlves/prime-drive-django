@@ -1,305 +1,285 @@
 {% extends 'base.html' %} {% block 'conteudo' %}
-<section class="relative overflow-hidden">
-  <!-- FOTO DESKTOP -->
+
+<section class="relative overflow-hidden bg-blue-deep">
   <div
-    class="hidden lg:block absolute inset-0 z-0 bg-[url('/static/assets/img/perfil.jpg')] bg-no-repeat bg-right bg-contain opacity-90"
+    class="absolute inset-0 bg-[url('/static/assets/img/suv-noite.png')] bg-cover bg-center opacity-25"
+  ></div>
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-blue-deep/85 via-blue-deep/95 to-blue-deep"
   ></div>
 
-  <!-- OVERLAY LATERAL -->
-  <div
-    class="absolute inset-0 z-0 bg-gradient-to-r from-blue-deep via-blue-deep/95 to-blue-deep/40 lg:to-transparent"
-  ></div>
-
-  <!-- OVERLAY INFERIOR -->
-  <div
-    class="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-blue-deep/10 to-blue-deep"
-  ></div>
-
-  <!-- CONTEÚDO -->
-  <div class="relative z-10">
-    <div class="container mx-auto px-6 py-10">
-      <div class="max-w-full lg:max-w-[55%] xl:max-w-[50%]">
-        <h1
-          class="text-sm xl:text-base tracking-[0.2em] uppercase text-amber-400 font-medium mb-4"
+  <div class="container relative z-10 mx-auto px-6 py-10 lg:py-16">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,610px)_420px] lg:items-center lg:gap-16">
+      <div>
+        <p
+          class="mb-4 text-sm font-medium uppercase tracking-[0.28em] text-amber-400"
         >
-          SOBRE NÓS
+          SOBRE N&Oacute;S
+        </p>
+
+        <h1
+          class="max-w-[720px] text-4xl font-extrabold uppercase leading-[0.98] text-white [text-shadow:0_5px_18px_rgba(0,0,0,0.9)] lg:text-6xl"
+        >
+          Cuidamos do trajeto para voc&ecirc; cuidar do resultado.
         </h1>
 
-        <div
-          class="flex flex-col text-3xl lg:text-4xl xl:text-5xl font-light leading-tight mb-3"
-        >
-          <p class="max-w-3xl">
-            Excelência em cada detalhe. Compromisso em cada viagem.
-          </p>
-        </div>
+        <div class="my-6 h-[1px] w-20 bg-gold-premium"></div>
 
-        <div class="my-6 w-24 h-[1px] bg-gold-premium"></div>
-
-        <p
-          class="text-sm lg:text-base xl:text-xl text-gray-300 max-w-xl leading-relaxed"
-        >
-          A Prime Drive nasceu com o propósito de oferecer um serviço de
-          transporte executivo diferenciado, unindo conforto, segurança e
-          pontualidade para clientes exigentes como você.
+        <p class="max-w-[620px] text-sm leading-relaxed text-gray-100 lg:text-lg">
+          A Prime Drive nasceu para entregar mais do que transporte executivo:
+          entregamos tranquilidade operacional, pontualidade e uma experi&ecirc;ncia
+          premium para quem n&atilde;o pode perder tempo entre compromissos.
         </p>
+
+        <p class="mt-4 max-w-[620px] text-sm leading-relaxed text-gray-300 lg:text-base">
+          Sabemos que o trabalho n&atilde;o para na estrada. Reuni&otilde;es continuam,
+          decis&otilde;es acontecem no deslocamento e cada minuto importa. Por isso,
+          nosso compromisso &eacute; transformar cada viagem em um ambiente seguro,
+          confort&aacute;vel, previs&iacute;vel e produtivo.
+        </p>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="{% url 'orcamento' %}"
+            class="flex items-center justify-center gap-3 rounded-md bg-gold-premium px-5 py-3 text-sm font-bold uppercase text-black transition hover:brightness-110 hover:shadow-xl"
+          >
+            Solicitar or&ccedil;amento
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-4"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+
+          <a
+            href="https://wa.me/5549991338651?text=Ola%2C%20gostaria%20de%20conhecer%20melhor%20a%20Prime%20Drive."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center rounded-md border border-gold-premium px-5 py-3 text-sm font-semibold uppercase text-white transition hover:bg-gold-premium hover:text-black"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div
+          class="overflow-hidden rounded-md border border-gold-premium/30 bg-blue-dark/80 p-3 shadow-2xl shadow-black/50 backdrop-blur-xl"
+        >
+          <img
+            class="h-[430px] w-full rounded-sm object-cover object-[50%_18%]"
+            src="/static/assets/img/perfil.jpg"
+            alt="Fundador da Prime Drive"
+          />
+          <div class="p-4">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
+              Presen&ccedil;a no atendimento
+            </p>
+            <p class="mt-2 text-sm leading-relaxed text-gray-300">
+              Zelo, discri&ccedil;&atilde;o e responsabilidade em cada detalhe do
+              servi&ccedil;o.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- INÍCIO DOS CARDS -->
-    <div class="container mx-auto px-6 lg:mt-10">
+    <div class="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
+      <div class="rounded-md border border-white/10 bg-gray-dark/80 p-4 backdrop-blur-xl">
+        <p class="text-2xl font-bold text-gold-premium">Zelo</p>
+        <p class="mt-1 text-xs uppercase tracking-[0.16em] text-gray-400">
+          em cada detalhe
+        </p>
+      </div>
+      <div class="rounded-md border border-white/10 bg-gray-dark/80 p-4 backdrop-blur-xl">
+        <p class="text-2xl font-bold text-gold-premium">Rota</p>
+        <p class="mt-1 text-xs uppercase tracking-[0.16em] text-gray-400">
+          planejada antes
+        </p>
+      </div>
+      <div class="rounded-md border border-white/10 bg-gray-dark/80 p-4 backdrop-blur-xl">
+        <p class="text-2xl font-bold text-gold-premium">Internet</p>
+        <p class="mt-1 text-xs uppercase tracking-[0.16em] text-gray-400">
+          para seguir conectado
+        </p>
+      </div>
+      <div class="rounded-md border border-white/10 bg-gray-dark/80 p-4 backdrop-blur-xl">
+        <p class="text-2xl font-bold text-gold-premium">Clareza</p>
+        <p class="mt-1 text-xs uppercase tracking-[0.16em] text-gray-400">
+          do contato ao destino
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container relative z-10 mx-auto px-6 pb-12">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-[0.9fr_1.1fr]">
       <div
-        class="grid grid-cols-2 overflow-hidden gap-2 rounded-md lg:grid-cols-4"
+        class="rounded-md border border-white/10 bg-blue-dark/80 p-6 shadow-2xl shadow-black/40 backdrop-blur-xl lg:p-8"
       >
-        <!-- EXPERIÊNCIA -->
-        <div
-          class="flex gap-3 px-3 py-4 items-center border rounded-md bg-gray-dark/80 backdrop-blur-xl border-white/10 lg:px-5 lg:py-6"
-        >
+        <p class="text-sm font-medium uppercase tracking-[0.28em] text-amber-400">
+          NOSSA MISS&Atilde;O
+        </p>
+        <h2 class="mt-3 text-3xl font-bold text-white lg:text-4xl">
+          Fazer o deslocamento deixar de ser um problema na rotina do cliente.
+        </h2>
+        <p class="mt-4 text-sm leading-relaxed text-gray-400">
+          Nossa miss&atilde;o &eacute; entregar resultado por meio de comodidade
+          operacional: rota planejada, atendimento claro, ve&iacute;culo adequado,
+          condu&ccedil;&atilde;o segura e comunica&ccedil;&atilde;o transparente do in&iacute;cio ao fim.
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-gray-400">
+          Fazemos isso com amor pelo servi&ccedil;o bem feito, respeito pelo tempo
+          do cliente e cuidado para que cada detalhe transmita excel&ecirc;ncia.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div class="rounded-md border border-white/10 bg-gray-dark/90 p-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="size-7 lg:size-9 stroke-gold-premium shrink-0"
+            class="size-9 stroke-gold-premium"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            stroke-width="1.5"
+            stroke-width="1.8"
           >
             <path
               d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
             />
             <path d="m9 12 2 2 4-4" />
           </svg>
-
-          <div class="p-2">
-            <h1
-              class="text-2xl tracking-[0.2em] uppercase text-amber-400 font-medium"
-            >
-              +5
-            </h1>
-
-            <h2 class="text-xs lg:text-base">Anos de experiência</h2>
-          </div>
+          <h3 class="mt-4 text-xl font-bold text-white">Seguran&ccedil;a</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-400">
+            Prioridade absoluta em cada trajeto, com dire&ccedil;&atilde;o respons&aacute;vel
+            e ve&iacute;culo preparado para a opera&ccedil;&atilde;o.
+          </p>
         </div>
 
-        <!-- CLIENTES -->
-        <div
-          class="flex gap-3 px-3 py-4 items-center border rounded-md bg-gray-dark/80 backdrop-blur-xl border-white/10 lg:px-5 lg:py-6"
-        >
+        <div class="rounded-md border border-white/10 bg-gray-dark/90 p-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="size-7 lg:size-9 stroke-gold-premium shrink-0"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M2 21a8 8 0 0 1 13.292-6" />
-            <circle cx="10" cy="8" r="5" />
-            <path d="m16 19 2 2 4-4" />
-          </svg>
-
-          <div class="p-2">
-            <h1 class="text-2xl uppercase text-amber-400 font-medium">
-              1.500+
-            </h1>
-
-            <h2 class="text-xs lg:text-base">Clientes atendidos</h2>
-          </div>
-        </div>
-
-        <!-- COMPROMISSO -->
-        <div
-          class="flex gap-3 px-3 py-4 items-center border rounded-md bg-gray-dark/80 backdrop-blur-xl border-white/10 lg:px-5 lg:py-6"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="size-7 lg:size-9 stroke-gold-premium shrink-0"
+            class="size-9 stroke-gold-premium"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            stroke-width="1.5"
+            stroke-width="1.8"
           >
-            <path
-              d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"
-            />
-            <path d="M7 14h.01" />
-            <path d="M17 14h.01" />
-            <rect width="18" height="8" x="3" y="10" rx="2" />
-            <path d="M5 18v2" />
-            <path d="M19 18v2" />
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
           </svg>
-
-          <div class="p-2">
-            <h1 class="text-2xl uppercase text-amber-400 font-medium">100%</h1>
-
-            <h2 class="text-xs lg:text-base">Compromisso com você</h2>
-          </div>
+          <h3 class="mt-4 text-xl font-bold text-white">Pontualidade</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-400">
+            Respeito real pelo hor&aacute;rio. Planejamento antes da viagem para
+            reduzir improvisos e atrasos.
+          </p>
         </div>
 
-        <!-- AVALIAÇÃO -->
-        <div
-          class="flex gap-3 px-3 py-4 items-center border rounded-md bg-gray-dark/80 backdrop-blur-xl border-white/10 lg:px-5 lg:py-6"
-        >
+        <div class="rounded-md border border-white/10 bg-gray-dark/90 p-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="size-7 lg:size-9 stroke-gold-premium shrink-0"
+            class="size-9 stroke-gold-premium"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            stroke-width="1.5"
+            stroke-width="1.8"
           >
-            <path
-              d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"
-            />
-            <path d="M7 14h.01" />
-            <path d="M17 14h.01" />
-            <rect width="18" height="8" x="3" y="10" rx="2" />
-            <path d="M5 18v2" />
-            <path d="M19 18v2" />
+            <path d="M5 13a10 10 0 0 1 14 0" />
+            <path d="M8.5 16.5a5 5 0 0 1 7 0" />
+            <path d="M2 9a15 15 0 0 1 20 0" />
+            <path d="M12 20h.01" />
           </svg>
+          <h3 class="mt-4 text-xl font-bold text-white">Conectividade operacional</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-400">
+            O trabalho continua no deslocamento. Por isso, valorizamos uma
+            cabine pr&aacute;tica, silenciosa e conectada para a rotina executiva.
+          </p>
+        </div>
 
-          <div class="p-2">
-            <h1 class="text-2xl uppercase text-amber-400 font-medium">5.0</h1>
-
-            <h2 class="text-xs lg:text-base">Avaliação dos nossos clientes</h2>
-          </div>
+        <div class="rounded-md border border-white/10 bg-gray-dark/90 p-5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-9 stroke-gold-premium"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <path d="M14 2v6h6" />
+            <path d="M8 13h8" />
+            <path d="M8 17h5" />
+          </svg>
+          <h3 class="mt-4 text-xl font-bold text-white">Transpar&ecirc;ncia</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-400">
+            Clareza no atendimento, nas informa&ccedil;&otilde;es e nas condi&ccedil;&otilde;es
+            combinadas com o cliente.
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- VALORES -->
-    <div class="container mx-auto px-6 mt-10">
-      <div class="relative z-10 w-full pb-10">
-        <div
-          class="p-5 lg:p-6 bg-blue-dark/80 backdrop-blur-xl rounded-md border border-white/10"
-        >
-          <h2
-            class="text-sm lg:text-base xl:text-lg tracking-[0.2em] uppercase text-amber-400 font-medium mb-6"
-          >
-            NOSSOS VALORES
+  <div class="container relative z-10 mx-auto px-6 pb-14">
+    <div
+      class="overflow-hidden rounded-md border border-gold-premium/30 bg-blue-dark/80 shadow-2xl shadow-black/40 backdrop-blur-xl"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_360px]">
+        <div class="p-6 lg:p-8">
+          <p class="text-sm font-medium uppercase tracking-[0.28em] text-amber-400">
+            ZELO EM CADA DETALHE
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-white lg:text-4xl">
+            Excel&ecirc;ncia aparece nos pequenos cuidados.
           </h2>
-
-          <div class="flex flex-col gap-5 lg:grid lg:grid-cols-4 lg:gap-6">
-            <!-- SEGURANÇA -->
-            <div
-              class="flex items-center gap-3 lg:items-start lg:border-r lg:border-white/10 lg:pr-6"
+          <p class="mt-4 max-w-3xl text-sm leading-relaxed text-gray-400">
+            O carro limpo, a comunica&ccedil;&atilde;o objetiva, a rota pensada, a postura
+            discreta, o cuidado com bagagens e a aten&ccedil;&atilde;o ao hor&aacute;rio formam
+            uma experi&ecirc;ncia que transmite seguran&ccedil;a antes mesmo da viagem
+            come&ccedil;ar.
+          </p>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="{% url 'orcamento' %}"
+              class="flex items-center justify-center rounded-md bg-gold-premium px-5 py-3 text-sm font-bold uppercase text-black transition hover:brightness-110"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-7 lg:size-8 xl:size-9 stroke-gold-premium shrink-0"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path
-                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-                />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-
-              <div>
-                <h2 class="text-sm lg:text-base xl:text-lg text-gray-200">
-                  Segurança
-                </h2>
-
-                <p class="text-xs lg:text-sm text-gray-500 leading-relaxed">
-                  Prioridade absoluta em cada trajeto.
-                </p>
-              </div>
-            </div>
-
-            <!-- PONTUALIDADE -->
-            <div
-              class="flex items-center gap-3 lg:items-start lg:border-r lg:border-white/10 lg:pr-6"
+              Planejar minha viagem
+            </a>
+            <a
+              href="https://wa.me/5549991338651?text=Ola%2C%20gostaria%20de%20planejar%20uma%20viagem%20com%20a%20Prime%20Drive."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center rounded-md border border-gold-premium px-5 py-3 text-sm font-semibold uppercase text-gold-premium transition hover:bg-gold-premium hover:text-black"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-7 lg:size-8 xl:size-9 stroke-gold-premium shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 6v6h4" />
-              </svg>
-
-              <div>
-                <h2 class="text-sm lg:text-base xl:text-lg text-gray-200">
-                  Pontualidade
-                </h2>
-
-                <p class="text-xs lg:text-sm text-gray-500 leading-relaxed">
-                  Respeitamos o seu tempo.
-                </p>
-              </div>
+              Conversar agora
+            </a>
+          </div>
+        </div>
+        <div class="border-t border-white/10 p-6 lg:border-l lg:border-t-0">
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-md border border-white/10 bg-gray-dark/80 p-4">
+              <p class="text-2xl font-bold text-white">Qualidade</p>
+              <p class="mt-1 text-xs text-gray-400">do primeiro contato ao destino</p>
             </div>
-
-            <!-- CONFORTO -->
-            <div
-              class="flex items-center gap-3 lg:items-start lg:border-r lg:border-white/10 lg:pr-6"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-7 lg:size-8 xl:size-9 stroke-gold-premium shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M10.5 3 8 9l4 13 4-13-2.5-6" />
-                <path
-                  d="M17 3a2 2 0 0 1 1.6.8l3 4a2 2 0 0 1 .013 2.382l-7.99 10.986A2 2 0 0 1 10.4 20.98L2.4 9.99A2 2 0 0 1 2.4 7.8l2.998-3.997A2 2 0 0 1 7 3z"
-                />
-                <path d="M2 9h20" />
-              </svg>
-
-              <div>
-                <h2 class="text-sm lg:text-base xl:text-lg text-gray-200">
-                  Conforto
-                </h2>
-
-                <p class="text-xs lg:text-sm text-gray-500 leading-relaxed">
-                  Veículo premium e ambientes pensados para você.
-                </p>
-              </div>
+            <div class="rounded-md border border-white/10 bg-gray-dark/80 p-4">
+              <p class="text-2xl font-bold text-white">Cuidado</p>
+              <p class="mt-1 text-xs text-gray-400">com pessoas, agenda e imagem</p>
             </div>
-
-            <!-- TRANSPARÊNCIA -->
-            <div class="flex items-center gap-3 lg:items-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-7 lg:size-8 xl:size-9 stroke-gold-premium shrink-0"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m11 17 2 2a1 1 0 1 0 3-3" />
-                <path
-                  d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"
-                />
-                <path d="m21 3 1 11h-2" />
-                <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
-                <path d="M3 4h8" />
-              </svg>
-
-              <div>
-                <h2 class="text-sm lg:text-base xl:text-lg text-gray-200">
-                  Transparência
-                </h2>
-
-                <p class="text-xs lg:text-sm text-gray-500 leading-relaxed">
-                  Relações baseadas na confiança e no respeito.
-                </p>
-              </div>
+            <div class="rounded-md border border-white/10 bg-gray-dark/80 p-4">
+              <p class="text-2xl font-bold text-white">Discri&ccedil;&atilde;o</p>
+              <p class="mt-1 text-xs text-gray-400">para rotinas executivas</p>
+            </div>
+            <div class="rounded-md border border-white/10 bg-gray-dark/80 p-4">
+              <p class="text-2xl font-bold text-white">Entrega</p>
+              <p class="mt-1 text-xs text-gray-400">focada no resultado final</p>
             </div>
           </div>
         </div>
@@ -307,4 +287,5 @@
     </div>
   </div>
 </section>
+
 {% endblock 'conteudo' %}

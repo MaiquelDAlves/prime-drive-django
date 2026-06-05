@@ -1,135 +1,123 @@
 {% extends 'base.html' %} {% block 'conteudo' %}
 <section
-  class="relative min-h-[calc(100dvh-64px)] bg-cover bg-[60%_35%] bg-no-repeat bg-[url('/static/assets/img/suv-noite-mobile.png')] md:bg-[url('/static/assets/img/suv-noite.png')]"
+  class="relative overflow-hidden bg-blue-deep bg-[url('/static/assets/img/suv-noite-mobile.png')] bg-cover bg-[62%_top] bg-no-repeat md:bg-[url('/static/assets/img/suv-noite.png')] lg:bg-[center_top]"
 >
   <div
-    class="absolute inset-0 bg-gradient-to-b from-blue-deep/70 via-blue-deep/40 to-blue-deep/90"
+    class="absolute inset-0 bg-gradient-to-b from-blue-deep/75 via-blue-deep/55 to-blue-deep"
   ></div>
-  <!-- CONTEÚDO PRINCIPAL -->
   <div
-    class="container mx-auto relative z-10 px-6 pt-10 lg:pt-20 flex flex-col lg:grid lg:grid-cols-[320px_1fr] xl:grid-cols-[360px_1fr] lg:gap-16 xl:gap-24"
+    class="absolute inset-0 hidden lg:block bg-gradient-to-r from-blue-deep via-blue-deep/82 to-blue-deep/35"
+  ></div>
+
+  <div
+    class="container relative z-10 mx-auto grid min-h-[calc(100dvh-64px)] gap-10 px-6 py-10 lg:grid-cols-[0.92fr_0.78fr] lg:items-center lg:gap-14 lg:py-14 xl:gap-20"
   >
-    <!-- TEXTO -->
-    <div class="lg:max-w-[360px]">
-      <h1
-        class="text-sm xl:text-base tracking-[0.2em] uppercase text-amber-400 font-medium mb-4"
+    <div class="max-w-3xl">
+      <p
+        class="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-amber-400 lg:text-sm"
       >
-        ORÇAMENTO
+        Or&ccedil;amento executivo
+      </p>
+
+      <h1
+        class="max-w-2xl text-4xl font-black uppercase leading-[0.96] text-white sm:text-5xl lg:text-6xl xl:text-7xl"
+      >
+        N&atilde;o alugue um carro.
+        <span class="block text-gold-premium">Contrate tranquilidade.</span>
       </h1>
 
-      <p class="text-3xl xl:text-5xl font-light leading-tight mb-3">
-        Solicite seu orçamento
-      </p>
-      <div class="my-6 w-24 h-1 bg-gold-premium"></div>
-      <p class="text-sm xl:text-xl text-gray-200 max-w-2xl">
-        Preencha os dados e receba seu orçamento personalizado. É rapido, fácil
-        e sem compromisso.
-      </p>
-      <div class="mt-6 hidden lg:block">
-        <div class="flex items-center text-left mb-6">
-          <div class="mr-6">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-12 stroke-gold-premium mb-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-              />
-              <path d="m9 12 2 2 4-4" />
-            </svg>
-          </div>
-          <div>
-            <p class="font-semibold">Segurança em primeiro lugar</p>
-            <p class="text-gray-400">
-              Motorista profissional e veículo com manutenção em dia.
-            </p>
-          </div>
-        </div>
-        <div class="flex items-center text-left mb-6">
-          <div class="mr-6">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-12 stroke-gold-premium mb-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"
-              />
-              <path d="M7 14h.01" />
-              <path d="M17 14h.01" />
-              <rect width="18" height="8" x="3" y="10" rx="2" />
-              <path d="M5 18v2" />
-              <path d="M19 18v2" />
-            </svg>
-          </div>
-          <div>
-            <p class="font-semibold">Veículo premium</p>
-            <p class="text-gray-400">
-              Veículo selecionado para oferecer o máximo de conforto.
-            </p>
-          </div>
-        </div>
+      <div class="my-6 h-px w-24 bg-gold-premium"></div>
 
-        <div class="flex items-center text-left mb-6">
-          <div class="mr-6">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-12 stroke-gold-premium mb-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <p class="font-semibold">Pontualidade Garantida</p>
-            <p class="text-gray-400">
-              Compromisso com horários e excelência no atendimento.
-            </p>
-          </div>
+      <p class="max-w-xl text-sm leading-relaxed text-gray-200 lg:text-lg">
+        Enquanto voc&ecirc; trabalha, atende sua agenda ou descansa, a Prime Drive
+        cuida do trajeto, do hor&aacute;rio, da rota, do ve&iacute;culo e da sua
+        seguran&ccedil;a.
+      </p>
+
+      <div class="mt-7 grid gap-3 sm:grid-cols-3">
+        <div class="rounded-md border border-white/10 bg-blue-dark/70 p-4 backdrop-blur">
+          <p class="text-2xl font-black text-gold-premium">0</p>
+          <p class="mt-1 text-xs font-semibold uppercase text-white">
+            burocracia de retirada
+          </p>
         </div>
+        <div class="rounded-md border border-white/10 bg-blue-dark/70 p-4 backdrop-blur">
+          <p class="text-2xl font-black text-gold-premium">Foco</p>
+          <p class="mt-1 text-xs font-semibold uppercase text-white">
+            na sua agenda
+          </p>
+        </div>
+        <div class="rounded-md border border-white/10 bg-blue-dark/70 p-4 backdrop-blur">
+          <p class="text-2xl font-black text-gold-premium">Rota</p>
+          <p class="mt-1 text-xs font-semibold uppercase text-white">
+            viagem planejada
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+        <a
+          href="#form-orcamento"
+          class="flex items-center justify-center gap-2 rounded-md bg-gold-premium px-6 py-3 text-sm font-black uppercase text-black transition hover:brightness-110"
+        >
+          Solicitar proposta
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="size-4"
+          >
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+
+        <a
+          href="https://wa.me/5549991338651?text=Ola%2C%20gostaria%20de%20solicitar%20um%20orcamento%20com%20a%20Prime%20Drive."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 rounded-md border border-gold-premium/70 px-6 py-3 text-sm font-bold uppercase text-white transition hover:bg-gold-premium hover:text-black"
+        >
+          Falar no WhatsApp
+        </a>
       </div>
     </div>
 
-    <!-- FORMULÁRIO -->
     <div
-      class="p-4 lg:p-6 mt-10 lg:mt-0 lg:w-full lg:max-w-[620px] xl:max-w-[680px] lg:self-start lg:justify-self-center bg-blue-dark/55 backdrop-blur-xl border border-white/10 rounded-2xl"
+      class="rounded-md border border-white/10 bg-blue-dark/80 p-4 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-6 lg:justify-self-end xl:w-[560px]"
     >
+      <div class="mb-5">
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.24em] text-amber-400"
+        >
+          Receba pelo WhatsApp
+        </p>
+        <p class="mt-2 text-sm leading-relaxed text-gray-300">
+          Informe o deslocamento e retornamos com uma proposta clara, sem
+          compromisso e adequada para sua rotina.
+        </p>
+      </div>
+
       <form
         id="form-orcamento"
-        class="flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-4"
+        class="grid gap-3 lg:grid-cols-2"
         action=""
       >
-        <h2
-          class="lg:col-span-2 text-sm xl:text-base tracking-[0.2em] uppercase text-amber-400 font-medium mb-1"
-        >
-          DADOS DA VIAGEM
-        </h2>
-
         <div
-          class="flex items-center gap-1 text-sm border border-white/10 rounded-md bg-blue-dark w-full transition-all duration-300 focus-within:border-gold-premium"
+          class="flex items-center gap-1 rounded-md border border-white/10 bg-blue-deep/70 text-sm transition-all duration-300 focus-within:border-gold-premium"
         >
-          <div class="p-3">
+          <div class="p-3 text-gold-premium">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="size-4"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="1.5"
+              stroke-width="1.7"
             >
               <path
                 stroke-linecap="round"
@@ -147,21 +135,21 @@
             id="origem"
             type="text"
             placeholder="Origem"
-            class="w-full h-full bg-transparent outline-none text-gray-500 font-semibold"
+            class="h-12 w-full bg-transparent pr-4 text-sm font-semibold text-white outline-none placeholder:text-gray-500"
           />
         </div>
 
         <div
-          class="flex items-center gap-1 text-sm border border-white/10 rounded-md bg-blue-dark w-full transition-all duration-300 focus-within:border-gold-premium"
+          class="flex items-center gap-1 rounded-md border border-white/10 bg-blue-deep/70 text-sm transition-all duration-300 focus-within:border-gold-premium"
         >
-          <div class="p-3">
+          <div class="p-3 text-gold-premium">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="size-4"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="1.5"
+              stroke-width="1.7"
             >
               <path
                 stroke-linecap="round"
@@ -179,39 +167,39 @@
             id="destino"
             type="text"
             placeholder="Destino"
-            class="w-full h-full bg-transparent outline-none text-gray-500 font-semibold"
+            class="h-12 w-full bg-transparent pr-4 text-sm font-semibold text-white outline-none placeholder:text-gray-500"
           />
         </div>
 
         <input
           id="data"
           type="date"
-          class="w-full text-gray-500 font-semibold text-[14px] bg-blue-dark border border-white/10 rounded-md px-3 py-3 outline-none transition-all duration-300 focus:border-gold-premium"
+          class="h-12 w-full rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm font-semibold text-gray-300 outline-none transition-all duration-300 focus:border-gold-premium"
         />
 
         <input
           id="hora"
           type="time"
-          class="w-full text-gray-500 font-semibold text-[14px] bg-blue-dark border border-white/10 rounded-md px-3 py-3 outline-none transition-all duration-300 focus:border-gold-premium"
+          class="h-12 w-full rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm font-semibold text-gray-300 outline-none transition-all duration-300 focus:border-gold-premium"
         />
 
         <select
           id="servico"
-          class="lg:col-span-2 w-full text-[14px] text-gray-500 font-semibold bg-blue-dark border border-white/10 rounded-md px-3 py-3 outline-none transition-all duration-300 focus:border-gold-premium"
+          class="h-12 w-full rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm font-semibold text-gray-300 outline-none transition-all duration-300 focus:border-gold-premium lg:col-span-2"
         >
-          <option>Selecione o serviço</option>
+          <option>Selecione o servi&ccedil;o</option>
           <option>Transfer aeroporto</option>
           <option>Executivo empresarial</option>
           <option>Viagem regional</option>
           <option>Eventos e shows</option>
           <option>Casamentos</option>
           <option>Atendimento personalizado</option>
-          <option>Outro serviço</option>
+          <option>Outro servi&ccedil;o</option>
         </select>
 
         <select
           id="passageiros"
-          class="w-full text-gray-500 font-semibold text-[14px] bg-blue-dark border border-white/10 rounded-md px-3 py-3 outline-none transition-all duration-300 focus:border-gold-premium"
+          class="h-12 w-full rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm font-semibold text-gray-300 outline-none transition-all duration-300 focus:border-gold-premium"
         >
           <option>Passageiros</option>
           <option>1 passageiro</option>
@@ -223,105 +211,193 @@
         <input
           id="bagagens"
           type="text"
-          placeholder="Bagagens (opcional)"
-          class="w-full text-gray-500 font-semibold text-[14px] bg-blue-dark border border-white/10 rounded-md px-4 py-3 outline-none transition-all duration-300 focus:border-gold-premium"
+          placeholder="Bagagens"
+          class="h-12 w-full rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm font-semibold text-white outline-none transition-all duration-300 placeholder:text-gray-500 focus:border-gold-premium"
         />
 
         <textarea
           id="observacoes"
-          placeholder="Observações"
+          placeholder="Observa&ccedil;&otilde;es, paradas, voo, hotel ou necessidade especial"
           rows="5"
-          class="lg:col-span-2 w-full text-gray-500 font-semibold text-[14px] bg-blue-dark border border-white/10 rounded-md px-4 py-4 outline-none resize-none transition-all duration-300 focus:border-gold-premium"
+          class="w-full resize-none rounded-md border border-white/10 bg-blue-deep/70 px-4 py-4 text-sm font-semibold text-white outline-none transition-all duration-300 placeholder:text-gray-500 focus:border-gold-premium lg:col-span-2"
         ></textarea>
 
         <button
           id="btn-orcamento"
           type="button"
-          class="lg:col-span-2 bg-gold-premium rounded-md py-3 px-4 text-black font-semibold cursor-pointer transition-all duration-300 hover:brightness-110 hover:shadow-xl"
+          class="flex items-center justify-center gap-2 rounded-md bg-gold-premium px-4 py-4 text-sm font-black uppercase text-black transition-all duration-300 hover:brightness-110 hover:shadow-xl lg:col-span-2"
         >
-          SOLICITAR PELO WHATSAPP
+          Solicitar pelo WhatsApp
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="size-4"
+          >
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
         </button>
       </form>
-    </div>
-  </div>
 
-  <!-- CARD INFERIOR -->
-  <div class="relative z-10 container mx-auto px-4 mt-6 pb-10">
-    <div
-      class="py-4 flex flex-col gap-7 bg-blue-dark/80 backdrop-blur-xl mt-5 rounded-md justify-around border border-white/10 text-center"
-    >
-      <h2
-        class="text-sm xl:text-base tracking-[0.2em] uppercase text-amber-400 font-medium"
-      >
-        POR QUE ESCOLHER A PRIME DRIVE?
-      </h2>
-
-      <div class="flex justify-around w-full">
-        <div class="text-center">
-          <div class="flex flex-col items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-8 stroke-gold-premium mb-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
-              />
-              <path d="m9 12 2 2 4-4" />
-            </svg>
-            <p class="text-sm">Segurança</p>
-          </div>
-          <p class="text-xs font-semibold text-gray-500">em primeiro lugar</p>
+      <div class="mt-5 grid gap-3 sm:grid-cols-3">
+        <div class="rounded-md border border-white/10 bg-white/5 p-3">
+          <p class="text-xs font-bold uppercase text-white">Sem compromisso</p>
+          <p class="mt-1 text-xs text-gray-400">Voc&ecirc; decide com clareza.</p>
         </div>
-
-        <div class="text-center">
-          <div class="flex flex-col items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-8 stroke-gold-premium mb-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"
-              />
-              <path d="M7 14h.01" />
-              <path d="M17 14h.01" />
-              <rect width="18" height="8" x="3" y="10" rx="2" />
-              <path d="M5 18v2" />
-              <path d="M19 18v2" />
-            </svg>
-            <p class="text-sm">Veículo</p>
-          </div>
-          <p class="text-xs font-semibold text-gray-500">premium</p>
+        <div class="rounded-md border border-white/10 bg-white/5 p-3">
+          <p class="text-xs font-bold uppercase text-white">Resposta r&aacute;pida</p>
+          <p class="mt-1 text-xs text-gray-400">Atendimento direto no WhatsApp.</p>
         </div>
-
-        <div class="text-center">
-          <div class="flex flex-col items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-8 stroke-gold-premium mb-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
-            </svg>
-            <p class="text-sm">Pontualidade</p>
-          </div>
-          <p class="text-xs font-semibold text-gray-500">garantida</p>
+        <div class="rounded-md border border-white/10 bg-white/5 p-3">
+          <p class="text-xs font-bold uppercase text-white">Opera&ccedil;&atilde;o segura</p>
+          <p class="mt-1 text-xs text-gray-400">Rota e hor&aacute;rio planejados.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-blue-deep px-6 py-12 lg:py-16">
+  <div class="container mx-auto">
+    <div class="mx-auto max-w-3xl text-center">
+      <p
+        class="text-xs font-semibold uppercase tracking-[0.28em] text-amber-400 lg:text-sm"
+      >
+        Decis&atilde;o inteligente
+      </p>
+      <h2
+        class="mt-4 text-3xl font-black uppercase leading-tight text-white lg:text-5xl"
+      >
+        5 motivos para n&atilde;o alugar um ve&iacute;culo na sua pr&oacute;xima agenda
+      </h2>
+      <p class="mt-4 text-sm leading-relaxed text-gray-300 lg:text-base">
+        Alugar parece simples at&eacute; entrar na conta o tempo perdido, a
+        responsabilidade da dire&ccedil;&atilde;o, o desgaste e a falta de
+        previsibilidade no trajeto.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-5 lg:grid-cols-2">
+      <div class="rounded-md border border-red-400/20 bg-red-950/10 p-5 lg:p-7">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-red-200">
+          Alugar um carro
+        </p>
+
+        <div class="mt-6 grid gap-3">
+          <div class="rounded-md border border-white/10 bg-blue-dark/70 p-4">
+            <p class="font-bold text-white">1. Voc&ecirc; vira o motorista</p>
+            <p class="mt-1 text-sm text-gray-400">
+              Depois de uma reuni&atilde;o, voo ou compromisso longo, ainda
+              precisa dirigir.
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-dark/70 p-4">
+            <p class="font-bold text-white">2. Perda de produtividade no trabalho</p>
+            <p class="mt-1 text-sm text-gray-400">
+              Dirigir impede liga&ccedil;&otilde;es, respostas, revis&otilde;es e decis&otilde;es
+              durante o deslocamento.
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-dark/70 p-4">
+            <p class="font-bold text-white">3. Burocracia entra no roteiro</p>
+            <p class="mt-1 text-sm text-gray-400">
+              Retirada, devolu&ccedil;&atilde;o, cau&ccedil;&atilde;o, estacionamento
+              e abastecimento tomam tempo.
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-dark/70 p-4">
+            <p class="font-bold text-white">4. A responsabilidade fica com voc&ecirc;</p>
+            <p class="mt-1 text-sm text-gray-400">
+              Rota, tr&acirc;nsito, seguran&ccedil;a, condi&ccedil;&otilde;es da estrada
+              e imprevistos viram sua preocupa&ccedil;&atilde;o.
+            </p>
+          </div>
+          <div class="rounded-md border border-white/10 bg-blue-dark/70 p-4">
+            <p class="font-bold text-white">5. O custo real aparece depois</p>
+            <p class="mt-1 text-sm text-gray-400">
+              Di&aacute;rias, seguros, taxas, combust&iacute;vel e tempo parado
+              podem tornar a escolha menos vantajosa.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="rounded-md border border-gold-premium/35 bg-gradient-to-b from-gold-premium/15 to-blue-dark/80 p-5 shadow-2xl shadow-gold-premium/10 lg:p-7"
+      >
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-amber-400">
+          Contratar a Prime Drive
+        </p>
+
+        <div class="mt-6 grid gap-3">
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/75 p-4">
+            <p class="font-bold text-white">1. Motorista profissional &agrave; disposi&ccedil;&atilde;o</p>
+            <p class="mt-1 text-sm text-gray-300">
+              Voc&ecirc; chega com postura executiva, sem desgaste de dire&ccedil;&atilde;o.
+            </p>
+          </div>
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/75 p-4">
+            <p class="font-bold text-white">2. Trabalhe enquanto viaja com conectividade</p>
+            <p class="mt-1 text-sm text-gray-300">
+              Com internet a bordo, voc&ecirc; atende, responde, acessa sistemas
+              e segue produtivo no caminho.
+            </p>
+          </div>
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/75 p-4">
+            <p class="font-bold text-white">3. Ve&iacute;culo pronto, limpo e confort&aacute;vel</p>
+            <p class="mt-1 text-sm text-gray-300">
+              Nada de fila, balc&atilde;o ou improviso. A experi&ecirc;ncia come&ccedil;a
+              no embarque.
+            </p>
+          </div>
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/75 p-4">
+            <p class="font-bold text-white">4. Pontualidade e seguran&ccedil;a no centro</p>
+            <p class="mt-1 text-sm text-gray-300">
+              Rota planejada, condu&ccedil;&atilde;o cuidadosa e aten&ccedil;&atilde;o ao
+              hor&aacute;rio do compromisso.
+            </p>
+          </div>
+          <div class="rounded-md border border-gold-premium/20 bg-blue-deep/75 p-4">
+            <p class="font-bold text-white">5. Or&ccedil;amento claro antes da viagem</p>
+            <p class="mt-1 text-sm text-gray-300">
+              Transpar&ecirc;ncia para viagens regionais, agenda corporativa,
+              eventos e transfers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mt-8 grid gap-4 rounded-md border border-white/10 bg-blue-dark/70 p-5 text-center backdrop-blur lg:grid-cols-[1fr_auto_auto] lg:items-center lg:text-left"
+    >
+      <div>
+        <p class="text-lg font-black uppercase text-white">
+          Pronto para trocar preocupa&ccedil;&atilde;o por previsibilidade?
+        </p>
+        <p class="mt-1 text-sm text-gray-400">
+          Envie os dados da viagem e receba uma proposta personalizada.
+        </p>
+      </div>
+      <a
+        href="#form-orcamento"
+        class="rounded-md bg-gold-premium px-6 py-3 text-sm font-black uppercase text-black transition hover:brightness-110"
+      >
+        Solicitar proposta
+      </a>
+      <a
+        href="https://wa.me/5549991338651?text=Ola%2C%20gostaria%20de%20entender%20os%20beneficios%20da%20Prime%20Drive."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-md border border-gold-premium/70 px-6 py-3 text-sm font-bold uppercase text-gold-premium transition hover:bg-gold-premium hover:text-black"
+      >
+        Tirar d&uacute;vidas
+      </a>
     </div>
   </div>
 </section>
