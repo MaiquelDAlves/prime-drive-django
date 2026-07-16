@@ -1,6 +1,8 @@
 {% extends 'base.html' %} {% block 'conteudo' %}
 
+<!-- Pagina de contato: direciona conversas e mensagens para o WhatsApp da Prime Drive. -->
 <section class="bg-blue-deep">
+  <!-- Hero com chamada direta e formulario de contato. -->
   <div
     class="relative overflow-hidden bg-[url('/static/assets/img/suv-noite-mobile.png')] bg-cover bg-[58%_top] bg-no-repeat lg:bg-[url('/static/assets/img/suv-noite.png')] lg:bg-center"
   >
@@ -30,10 +32,13 @@
 
         <div class="my-6 h-px w-24 bg-gold-premium"></div>
 
-        <p class="max-w-[560px] text-sm leading-relaxed text-gray-200 lg:text-lg">
+        <p
+          class="max-w-[560px] text-sm leading-relaxed text-gray-200 lg:text-lg"
+        >
           Atendimento direto para viagens, transfers, agendas corporativas e
-          deslocamentos especiais. Explique sua necessidade e receba orienta&ccedil;&atilde;o
-          com clareza, discri&ccedil;&atilde;o e agilidade.
+          deslocamentos especiais. Explique sua necessidade e receba
+          orienta&ccedil;&atilde;o com clareza, discri&ccedil;&atilde;o e
+          agilidade.
         </p>
 
         <div class="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -68,19 +73,25 @@
         </div>
 
         <div class="mt-7 grid gap-3 sm:grid-cols-3">
-          <div class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl">
+          <div
+            class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl"
+          >
             <p class="text-2xl font-black text-gold-premium">R&aacute;pido</p>
             <p class="mt-1 text-xs font-semibold uppercase text-white">
               resposta direta
             </p>
           </div>
-          <div class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl">
+          <div
+            class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl"
+          >
             <p class="text-2xl font-black text-gold-premium">Seguro</p>
             <p class="mt-1 text-xs font-semibold uppercase text-white">
               atendimento discreto
             </p>
           </div>
-          <div class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl">
+          <div
+            class="rounded-md border border-white/10 bg-blue-dark/75 p-4 backdrop-blur-xl"
+          >
             <p class="text-2xl font-black text-gold-premium">Claro</p>
             <p class="mt-1 text-xs font-semibold uppercase text-white">
               pr&oacute;ximo passo definido
@@ -89,6 +100,7 @@
         </div>
       </div>
 
+      <!-- Formulario de contato. Os ids dos campos sao lidos por static/js/contato.js. -->
       <div
         class="rounded-md border border-white/10 bg-blue-dark/80 p-4 shadow-2xl shadow-black/50 backdrop-blur-xl sm:p-6"
       >
@@ -98,11 +110,12 @@
           Envie uma mensagem
         </p>
         <p class="mt-2 text-sm leading-relaxed text-gray-300">
-          Conte o que voc&ecirc; precisa. A mensagem ser&aacute; enviada diretamente
-          para o WhatsApp da Prime Drive.
+          Conte o que voc&ecirc; precisa. A mensagem ser&aacute; enviada
+          diretamente para o WhatsApp da Prime Drive.
         </p>
 
         <form id="form-contato" action="" class="mt-5 flex flex-col gap-3">
+          <!-- Dados basicos para o retorno do atendimento. -->
           <label
             class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
           >
@@ -128,6 +141,7 @@
             </svg>
           </label>
 
+          <!-- Mensagem livre do cliente. -->
           <label
             class="flex items-center gap-3 rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm text-gray-400 transition-all duration-300 focus-within:border-gold-premium focus-within:ring-1 focus-within:ring-gold-premium"
           >
@@ -204,6 +218,7 @@
             </svg>
           </label>
 
+          <!-- Botao monta o texto e abre uma conversa no WhatsApp. -->
           <button
             id="btn-contato"
             type="button"
@@ -225,7 +240,9 @@
             </svg>
           </button>
 
-          <p class="mt-2 flex items-center justify-center gap-2 text-xs text-gray-300">
+          <p
+            class="mt-2 flex items-center justify-center gap-2 text-xs text-gray-300"
+          >
             <span class="text-gold-premium">&#9635;</span>
             Seus dados s&atilde;o usados apenas para retorno do atendimento.
           </p>
@@ -234,6 +251,7 @@
     </div>
   </div>
 
+  <!-- Canais de atendimento e fluxo sugerido para o primeiro contato. -->
   <div class="container mx-auto px-6 py-10 lg:py-14">
     <div class="grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
       <div>
@@ -242,10 +260,14 @@
         >
           Canais de atendimento
         </p>
-        <h2 class="mt-3 text-3xl font-black uppercase leading-tight text-white lg:text-5xl">
+        <h2
+          class="mt-3 text-3xl font-black uppercase leading-tight text-white lg:text-5xl"
+        >
           O primeiro contato j&aacute; precisa transmitir confian&ccedil;a.
         </h2>
-        <p class="mt-4 max-w-xl text-sm leading-relaxed text-gray-400 lg:text-base">
+        <p
+          class="mt-4 max-w-xl text-sm leading-relaxed text-gray-400 lg:text-base"
+        >
           Seja para uma viagem regional, compromisso executivo, transfer ou
           agenda recorrente, a Prime Drive organiza o atendimento com foco em
           seguran&ccedil;a, pontualidade e transpar&ecirc;ncia.
@@ -259,7 +281,9 @@
           rel="noopener noreferrer"
           class="rounded-md border border-gold-premium/35 bg-blue-dark/80 p-5 transition hover:-translate-y-1 hover:border-gold-premium"
         >
-          <p class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium"
+          >
             WhatsApp
           </p>
           <p class="mt-3 text-xl font-bold text-white">(49) 99133-8651</p>
@@ -269,17 +293,24 @@
         </a>
 
         <div class="rounded-md border border-white/10 bg-blue-dark/80 p-5">
-          <p class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium"
+          >
             E-mail
           </p>
-          <p class="mt-3 text-xl font-bold text-white">maiquelalves@hotmail.com</p>
+          <p class="mt-3 text-xl font-bold text-white">
+            maiquelalves@hotmail.com
+          </p>
           <p class="mt-2 text-sm text-gray-400">
-            Ideal para demandas corporativas e informa&ccedil;&otilde;es detalhadas.
+            Ideal para demandas corporativas e informa&ccedil;&otilde;es
+            detalhadas.
           </p>
         </div>
 
         <div class="rounded-md border border-white/10 bg-blue-dark/80 p-5">
-          <p class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium"
+          >
             Atendimento
           </p>
           <p class="mt-3 text-xl font-bold text-white">8h &agrave;s 20h</p>
@@ -289,12 +320,15 @@
         </div>
 
         <div class="rounded-md border border-white/10 bg-blue-dark/80 p-5">
-          <p class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.18em] text-gold-premium"
+          >
             Regi&atilde;o
           </p>
           <p class="mt-3 text-xl font-bold text-white">Chapec&oacute; - SC</p>
           <p class="mt-2 text-sm text-gray-400">
-            Atendimento para Chapec&oacute;, regi&atilde;o e viagens sob consulta.
+            Atendimento para Chapec&oacute;, regi&atilde;o e viagens sob
+            consulta.
           </p>
         </div>
       </div>
@@ -309,13 +343,20 @@
         </p>
       </div>
       <div class="rounded-md border border-white/10 bg-blue-dark/70 p-5">
-        <p class="text-lg font-bold text-white">Receba orienta&ccedil;&atilde;o</p>
+        <p class="text-lg font-bold text-white">
+          Receba orienta&ccedil;&atilde;o
+        </p>
         <p class="mt-2 text-sm leading-relaxed text-gray-400">
-          Avaliamos a melhor forma de atender com previsibilidade e discri&ccedil;&atilde;o.
+          Avaliamos a melhor forma de atender com previsibilidade e
+          discri&ccedil;&atilde;o.
         </p>
       </div>
-      <div class="rounded-md border border-gold-premium/35 bg-gold-premium/10 p-5">
-        <p class="text-lg font-bold text-white">Confirme com seguran&ccedil;a</p>
+      <div
+        class="rounded-md border border-gold-premium/35 bg-gold-premium/10 p-5"
+      >
+        <p class="text-lg font-bold text-white">
+          Confirme com seguran&ccedil;a
+        </p>
         <p class="mt-2 text-sm leading-relaxed text-gray-300">
           Voc&ecirc; sabe o pr&oacute;ximo passo antes da viagem acontecer.
         </p>
@@ -324,9 +365,9 @@
   </div>
 </section>
 
-{% endblock 'conteudo' %}
-
-{% block scripts %}
-  {% load static %}
-  <script src="{% static 'js/contato.js' %}" defer></script>
+{% endblock 'conteudo' %} {% block scripts %} {% load static %}
+<!-- Script exclusivo desta pagina: transforma o formulario em mensagem de WhatsApp. -->
+<script src="{% static 'js/contato.js' %}" defer></script>
 {% endblock scripts %}
+
+

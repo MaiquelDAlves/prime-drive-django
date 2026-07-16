@@ -1,6 +1,8 @@
 {% extends 'base.html' %} {% block 'conteudo' %}
 
+<!-- Pagina de servicos: mostra modalidades de atendimento e argumentos de escolha. -->
 <section class="relative overflow-hidden bg-blue-deep">
+  <!-- Hero da pagina com chamada comercial e resumo da operacao. -->
   <div
     class="relative bg-[url('/static/assets/img/suv-noite-mobile.png')] bg-cover bg-[58%_top] bg-no-repeat lg:bg-[url('/static/assets/img/suv-noite.png')] lg:bg-center"
   >
@@ -95,6 +97,7 @@
     </div>
   </div>
 
+  <!-- Grade com os principais tipos de servico oferecidos. -->
   <div class="container mx-auto px-6 py-10 lg:py-14">
     <div class="mb-7 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
       <div>
@@ -110,6 +113,7 @@
     </div>
 
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <!-- Cada article representa um servico com imagem, categoria e descricao. -->
       <article
         class="group overflow-hidden rounded-md border border-white/10 bg-gray-dark/90 transition hover:-translate-y-1 hover:border-gold-premium/70 hover:shadow-2xl hover:shadow-black/40"
       >
@@ -256,6 +260,7 @@
     </div>
   </div>
 
+  <!-- Bloco de fechamento: reforca diferenciais e leva para orcamento/WhatsApp. -->
   <div class="container mx-auto px-6 pb-12">
     <div
       class="grid overflow-hidden rounded-md border border-white/10 bg-blue-dark/80 shadow-2xl shadow-black/40 backdrop-blur-xl lg:grid-cols-[1.1fr_1.4fr]"
@@ -291,6 +296,7 @@
         </div>
       </div>
 
+      <!-- Cards laterais com beneficios operacionais do servico. -->
       <div class="grid grid-cols-1 gap-0 sm:grid-cols-2">
         <div class="border-b border-white/10 p-5 sm:border-r">
           <svg

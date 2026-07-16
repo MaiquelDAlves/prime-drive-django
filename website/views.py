@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 
+# Cada view abaixo apenas renderiza um template estatico da pagina correspondente.
 def inicio(request):
     return render(request, "website/inicio.html")
 

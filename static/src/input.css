@@ -5,6 +5,7 @@
 @source "../../website";
 @source "../../static/js";
 
+/* Tokens de tema usados pelas classes Tailwind personalizadas do site. */
 @theme {
   --color-gold-premium: #d4af37;
   --color-gold-light: #f2c94c;
@@ -22,6 +23,7 @@
 }
 
 html {
+  /* Deixa os links com ancora, como #form-orcamento, rolarem suavemente. */
   scroll-behavior: smooth;
 }
 
@@ -41,6 +43,7 @@ body {
 
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
+  /* Ajusta os icones nativos de data/hora para ficarem legiveis no tema escuro. */
   filter: invert(1);
   opacity: 0.5;
   cursor: pointer;

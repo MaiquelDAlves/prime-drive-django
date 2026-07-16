@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
+    <!-- Configuracoes globais: fontes, CSS compilado e script comum do menu. -->
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="{% static 'css/tailwind.css' %}?v=20" />
@@ -252,7 +253,9 @@
       </div>
     </nav>
 
+    <!-- Conteudo especifico de cada pagina renderizado pelos templates filhos. -->
     {% block 'conteudo' %} {% endblock 'conteudo' %}
+    <!-- Espaco para scripts exclusivos de paginas, como contato e orcamento. -->
     {% block scripts %}{% endblock scripts %}
   </body>
 </html>

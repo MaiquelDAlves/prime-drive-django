@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Inclui as paginas publicas do app website na raiz do dominio.
     path("", include("website.urls")),
 ]

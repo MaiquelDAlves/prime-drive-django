@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block 'conteudo' %}
+<!-- Pagina de orcamento: captura dados da viagem e envia tudo pelo WhatsApp. -->
 <section
   class="relative overflow-hidden bg-blue-deep bg-[url('/static/assets/img/suv-noite-mobile.png')] bg-cover bg-[62%_top] bg-no-repeat md:bg-[url('/static/assets/img/suv-noite.png')] lg:bg-[center_top]"
 >
@@ -12,6 +13,7 @@
   <div
     class="container relative z-10 mx-auto grid min-h-[calc(100dvh-64px)] gap-10 px-6 py-10 lg:grid-cols-[0.92fr_0.78fr] lg:items-center lg:gap-14 lg:py-14 xl:gap-20"
   >
+    <!-- Coluna de venda: reforca a diferenca entre alugar carro e contratar servico. -->
     <div class="max-w-3xl">
       <p
         class="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-amber-400 lg:text-sm"
@@ -87,6 +89,7 @@
       </div>
     </div>
 
+    <!-- Formulario principal. Os ids dos campos sao usados em static/js/orcamento.js. -->
     <div
       class="rounded-md border border-white/10 bg-blue-dark/80 p-4 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-6 lg:justify-self-end xl:w-[560px]"
     >
@@ -107,6 +110,7 @@
         class="grid gap-3 lg:grid-cols-2"
         action=""
       >
+        <!-- Origem e destino do trajeto. -->
         <div
           class="flex items-center gap-1 rounded-md border border-white/10 bg-blue-deep/70 text-sm transition-all duration-300 focus-within:border-gold-premium"
         >
@@ -171,6 +175,7 @@
           />
         </div>
 
+        <!-- Data, horario e tipo de servico solicitado. -->
         <input
           id="data"
           type="date"
@@ -183,6 +188,7 @@
           class="h-12 w-full rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm font-semibold text-gray-300 outline-none transition-all duration-300 focus:border-gold-premium"
         />
 
+        <!-- Quantidade de passageiros, bagagens e observacoes complementares. -->
         <select
           id="servico"
           class="h-12 w-full rounded-md border border-white/10 bg-blue-deep/70 px-4 text-sm font-semibold text-gray-300 outline-none transition-all duration-300 focus:border-gold-premium lg:col-span-2"
@@ -222,6 +228,7 @@
           class="w-full resize-none rounded-md border border-white/10 bg-blue-deep/70 px-4 py-4 text-sm font-semibold text-white outline-none transition-all duration-300 placeholder:text-gray-500 focus:border-gold-premium lg:col-span-2"
         ></textarea>
 
+        <!-- Botao monta a mensagem e abre o WhatsApp em nova aba. -->
         <button
           id="btn-orcamento"
           type="button"
@@ -244,6 +251,7 @@
         </button>
       </form>
 
+      <!-- Microgarantias abaixo do formulario para reduzir duvidas antes do envio. -->
       <div class="mt-5 grid gap-3 sm:grid-cols-3">
         <div class="rounded-md border border-white/10 bg-white/5 p-3">
           <p class="text-xs font-bold uppercase text-white">Sem compromisso</p>
@@ -262,6 +270,7 @@
   </div>
 </section>
 
+<!-- Comparativo de apoio para reforcar o valor da proposta apos o formulario. -->
 <section class="bg-blue-deep px-6 py-12 lg:py-16">
   <div class="container mx-auto">
     <div class="mx-auto max-w-3xl text-center">
@@ -283,6 +292,7 @@
     </div>
 
     <div class="mt-10 grid gap-5 lg:grid-cols-2">
+      <!-- Coluna de problemas do aluguel tradicional. -->
       <div class="rounded-md border border-red-400/20 bg-red-950/10 p-5 lg:p-7">
         <p class="text-sm font-bold uppercase tracking-[0.2em] text-red-200">
           Alugar um carro
@@ -327,6 +337,7 @@
         </div>
       </div>
 
+      <!-- Coluna de beneficios ao contratar transporte executivo. -->
       <div
         class="rounded-md border border-gold-premium/35 bg-gradient-to-b from-gold-premium/15 to-blue-dark/80 p-5 shadow-2xl shadow-gold-premium/10 lg:p-7"
       >
@@ -405,5 +416,6 @@
 
 {% block scripts %}
   {% load static %}
+  <!-- Script exclusivo desta pagina: transforma o formulario em mensagem de WhatsApp. -->
   <script src="{% static 'js/orcamento.js' %}" defer></script>
 {% endblock scripts %}

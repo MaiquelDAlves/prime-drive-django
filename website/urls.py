@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+# Rotas publicas do site. O name de cada rota e usado nos templates com {% url %}.
 urlpatterns = [
     path("", views.inicio, name="inicio"),
     path("servicos/", views.servicos, name="servicos"),
