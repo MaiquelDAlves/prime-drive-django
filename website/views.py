@@ -24,3 +24,7 @@ def contato(request):
 
 def orcamento(request):
     return render(request, "website/orcamento.html")
+
+
+def nfc(request):
+    return render(request, "website/nfc.html")

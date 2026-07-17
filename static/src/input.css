@@ -69,3 +69,23 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .date-time-field::-webkit-calendar-picker-indicator {
   margin-left: 0.35rem;
 }
+
+.nfc-reveal {
+  animation: nfc-reveal 0.65s ease-out both;
+}
+
+.nfc-reveal-delay {
+  animation-delay: 0.12s;
+}
+
+@keyframes nfc-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

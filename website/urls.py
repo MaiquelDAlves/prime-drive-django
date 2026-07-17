@@ -9,4 +9,6 @@ urlpatterns = [
     path("sobre/", views.sobre, name="sobre"),
     path("contato/", views.contato, name="contato"),
     path("orcamento/", views.orcamento, name="orcamento"),
+    path("nfc", views.nfc, name="nfc"),
+    path("nfc/", views.nfc),
 ]
