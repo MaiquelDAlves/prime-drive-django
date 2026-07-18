@@ -37,6 +37,10 @@ ALLOWED_HOSTS = [
     for host in os.environ.get("ALLOWED_HOSTS", "").split(",")
     if host.strip()
 ]
+ALLOWED_HOSTS += [
+    "primedrivetransporte.com.br",
+    "www.primedrivetransporte.com.br",
+]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
 if RENDER_EXTERNAL_HOSTNAME:
@@ -180,6 +184,10 @@ CSRF_TRUSTED_ORIGINS = [
     origin.strip()
     for origin in os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
     if origin.strip()
+]
+CSRF_TRUSTED_ORIGINS += [
+    "https://primedrivetransporte.com.br",
+    "https://www.primedrivetransporte.com.br",
 ]
 if RENDER_EXTERNAL_HOSTNAME:
     CSRF_TRUSTED_ORIGINS.append(f"https://{RENDER_EXTERNAL_HOSTNAME}")
